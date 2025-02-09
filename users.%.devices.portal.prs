@@ -1,0 +1,2245 @@
+<properties>
+  <properties class="linked-hash-map">
+    <entry>
+      <string>connectionProperties</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Активный" name="enabled" type="B">
+              <help>Данный флаг включает и отключает мониторинг HTTP сервера.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Адрес" name="address" type="S">
+              <help>IP адрес или имя хоста HTTP сервера.</help>
+              <defaultValue/>
+            </field>
+            <field description="Протокол" name="protocol" type="S">
+              <selectionValues>
+                <option description="HTTP">http</option>
+                <option description="HTTPS">https</option>
+              </selectionValues>
+              <help>HTTP или HTTP Secure (HTTPS)</help>
+              <defaultValue>http</defaultValue>
+            </field>
+            <field description="Версия протокола" name="protocolVersion" type="S">
+              <selectionValues>
+                <option description="1.1">1_1</option>
+                <option description="2.0">2_0</option>
+              </selectionValues>
+              <help>Версия HTTP</help>
+              <defaultValue>1_1</defaultValue>
+            </field>
+            <field description="Порт" name="port" type="I">
+              <validators contentType="base64">HEweMSA2NTUzNR0=</validators>
+              <help>Порт, на котором работает HTTP сервер.</help>
+              <defaultValue>80</defaultValue>
+            </field>
+            <field description="URL" name="url" type="S">
+              <help>Путь к ресурсу расположенному на HTTP сервере.</help>
+              <defaultValue>/</defaultValue>
+            </field>
+            <field description="Метод запроса" name="requestMethod" type="S">
+              <selectionValues>
+                <option description="DELETE">DELETE</option>
+                <option description="POST">POST</option>
+                <option description="PUT">PUT</option>
+                <option description="GET">GET</option>
+              </selectionValues>
+              <help>Поддерживается два метода HTTP запроса: GET и POST.</help>
+              <defaultValue>GET</defaultValue>
+            </field>
+            <field description="Данные для выполнения запроса POST" editor="textarea" name="postData" nullable="true" type="S">
+              <help>Данные, которые будут представлены с POST запросом в виде строки.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Кодировка" extendableSelectionValues="true" name="encoding" type="S">
+              <selectionValues>
+                <option description="Big5">Big5</option>
+                <option description="Big5-HKSCS">Big5-HKSCS</option>
+                <option description="CESU-8">CESU-8</option>
+                <option description="EUC-JP">EUC-JP</option>
+                <option description="EUC-KR">EUC-KR</option>
+                <option description="GB18030">GB18030</option>
+                <option description="GB2312">GB2312</option>
+                <option description="GBK">GBK</option>
+                <option description="IBM-Thai">IBM-Thai</option>
+                <option description="IBM00858">IBM00858</option>
+                <option description="IBM01140">IBM01140</option>
+                <option description="IBM01141">IBM01141</option>
+                <option description="IBM01142">IBM01142</option>
+                <option description="IBM01143">IBM01143</option>
+                <option description="IBM01144">IBM01144</option>
+                <option description="IBM01145">IBM01145</option>
+                <option description="IBM01146">IBM01146</option>
+                <option description="IBM01147">IBM01147</option>
+                <option description="IBM01148">IBM01148</option>
+                <option description="IBM01149">IBM01149</option>
+                <option description="IBM037">IBM037</option>
+                <option description="IBM1026">IBM1026</option>
+                <option description="IBM1047">IBM1047</option>
+                <option description="IBM273">IBM273</option>
+                <option description="IBM277">IBM277</option>
+                <option description="IBM278">IBM278</option>
+                <option description="IBM280">IBM280</option>
+                <option description="IBM284">IBM284</option>
+                <option description="IBM285">IBM285</option>
+                <option description="IBM290">IBM290</option>
+                <option description="IBM297">IBM297</option>
+                <option description="IBM420">IBM420</option>
+                <option description="IBM424">IBM424</option>
+                <option description="IBM437">IBM437</option>
+                <option description="IBM500">IBM500</option>
+                <option description="IBM775">IBM775</option>
+                <option description="IBM850">IBM850</option>
+                <option description="IBM852">IBM852</option>
+                <option description="IBM855">IBM855</option>
+                <option description="IBM857">IBM857</option>
+                <option description="IBM860">IBM860</option>
+                <option description="IBM861">IBM861</option>
+                <option description="IBM862">IBM862</option>
+                <option description="IBM863">IBM863</option>
+                <option description="IBM864">IBM864</option>
+                <option description="IBM865">IBM865</option>
+                <option description="IBM866">IBM866</option>
+                <option description="IBM868">IBM868</option>
+                <option description="IBM869">IBM869</option>
+                <option description="IBM870">IBM870</option>
+                <option description="IBM871">IBM871</option>
+                <option description="IBM918">IBM918</option>
+                <option description="ISO-2022-CN">ISO-2022-CN</option>
+                <option description="ISO-2022-JP">ISO-2022-JP</option>
+                <option description="ISO-2022-JP-2">ISO-2022-JP-2</option>
+                <option description="ISO-2022-KR">ISO-2022-KR</option>
+                <option description="ISO-8859-1">ISO-8859-1</option>
+                <option description="ISO-8859-13">ISO-8859-13</option>
+                <option description="ISO-8859-15">ISO-8859-15</option>
+                <option description="ISO-8859-2">ISO-8859-2</option>
+                <option description="ISO-8859-3">ISO-8859-3</option>
+                <option description="ISO-8859-4">ISO-8859-4</option>
+                <option description="ISO-8859-5">ISO-8859-5</option>
+                <option description="ISO-8859-6">ISO-8859-6</option>
+                <option description="ISO-8859-7">ISO-8859-7</option>
+                <option description="ISO-8859-8">ISO-8859-8</option>
+                <option description="ISO-8859-9">ISO-8859-9</option>
+                <option description="JIS_X0201">JIS_X0201</option>
+                <option description="JIS_X0212-1990">JIS_X0212-1990</option>
+                <option description="KOI8-R">KOI8-R</option>
+                <option description="KOI8-U">KOI8-U</option>
+                <option description="Shift_JIS">Shift_JIS</option>
+                <option description="TIS-620">TIS-620</option>
+                <option description="US-ASCII">US-ASCII</option>
+                <option description="UTF-16">UTF-16</option>
+                <option description="UTF-16BE">UTF-16BE</option>
+                <option description="UTF-16LE">UTF-16LE</option>
+                <option description="UTF-32">UTF-32</option>
+                <option description="UTF-32BE">UTF-32BE</option>
+                <option description="UTF-32LE">UTF-32LE</option>
+                <option description="UTF-8">UTF-8</option>
+                <option description="X-UTF-32BE-BOM">X-UTF-32BE-BOM</option>
+                <option description="X-UTF-32LE-BOM">X-UTF-32LE-BOM</option>
+                <option description="windows-1250">windows-1250</option>
+                <option description="windows-1251">windows-1251</option>
+                <option description="windows-1252">windows-1252</option>
+                <option description="windows-1253">windows-1253</option>
+                <option description="windows-1254">windows-1254</option>
+                <option description="windows-1255">windows-1255</option>
+                <option description="windows-1256">windows-1256</option>
+                <option description="windows-1257">windows-1257</option>
+                <option description="windows-1258">windows-1258</option>
+                <option description="windows-31j">windows-31j</option>
+                <option description="x-Big5-HKSCS-2001">x-Big5-HKSCS-2001</option>
+                <option description="x-Big5-Solaris">x-Big5-Solaris</option>
+                <option description="x-EUC-TW">x-EUC-TW</option>
+                <option description="x-IBM1006">x-IBM1006</option>
+                <option description="x-IBM1025">x-IBM1025</option>
+                <option description="x-IBM1046">x-IBM1046</option>
+                <option description="x-IBM1097">x-IBM1097</option>
+                <option description="x-IBM1098">x-IBM1098</option>
+                <option description="x-IBM1112">x-IBM1112</option>
+                <option description="x-IBM1122">x-IBM1122</option>
+                <option description="x-IBM1123">x-IBM1123</option>
+                <option description="x-IBM1124">x-IBM1124</option>
+                <option description="x-IBM1166">x-IBM1166</option>
+                <option description="x-IBM1364">x-IBM1364</option>
+                <option description="x-IBM1381">x-IBM1381</option>
+                <option description="x-IBM1383">x-IBM1383</option>
+                <option description="x-IBM300">x-IBM300</option>
+                <option description="x-IBM33722">x-IBM33722</option>
+                <option description="x-IBM737">x-IBM737</option>
+                <option description="x-IBM833">x-IBM833</option>
+                <option description="x-IBM834">x-IBM834</option>
+                <option description="x-IBM856">x-IBM856</option>
+                <option description="x-IBM874">x-IBM874</option>
+                <option description="x-IBM875">x-IBM875</option>
+                <option description="x-IBM921">x-IBM921</option>
+                <option description="x-IBM922">x-IBM922</option>
+                <option description="x-IBM930">x-IBM930</option>
+                <option description="x-IBM933">x-IBM933</option>
+                <option description="x-IBM935">x-IBM935</option>
+                <option description="x-IBM937">x-IBM937</option>
+                <option description="x-IBM939">x-IBM939</option>
+                <option description="x-IBM942">x-IBM942</option>
+                <option description="x-IBM942C">x-IBM942C</option>
+                <option description="x-IBM943">x-IBM943</option>
+                <option description="x-IBM943C">x-IBM943C</option>
+                <option description="x-IBM948">x-IBM948</option>
+                <option description="x-IBM949">x-IBM949</option>
+                <option description="x-IBM949C">x-IBM949C</option>
+                <option description="x-IBM950">x-IBM950</option>
+                <option description="x-IBM964">x-IBM964</option>
+                <option description="x-IBM970">x-IBM970</option>
+                <option description="x-ISCII91">x-ISCII91</option>
+                <option description="x-ISO-2022-CN-CNS">x-ISO-2022-CN-CNS</option>
+                <option description="x-ISO-2022-CN-GB">x-ISO-2022-CN-GB</option>
+                <option description="x-JIS0208">x-JIS0208</option>
+                <option description="x-JISAutoDetect">x-JISAutoDetect</option>
+                <option description="x-Johab">x-Johab</option>
+                <option description="x-MS932_0213">x-MS932_0213</option>
+                <option description="x-MS950-HKSCS">x-MS950-HKSCS</option>
+                <option description="x-MS950-HKSCS-XP">x-MS950-HKSCS-XP</option>
+                <option description="x-MacArabic">x-MacArabic</option>
+                <option description="x-MacCentralEurope">x-MacCentralEurope</option>
+                <option description="x-MacCroatian">x-MacCroatian</option>
+                <option description="x-MacCyrillic">x-MacCyrillic</option>
+                <option description="x-MacDingbat">x-MacDingbat</option>
+                <option description="x-MacGreek">x-MacGreek</option>
+                <option description="x-MacHebrew">x-MacHebrew</option>
+                <option description="x-MacIceland">x-MacIceland</option>
+                <option description="x-MacRoman">x-MacRoman</option>
+                <option description="x-MacRomania">x-MacRomania</option>
+                <option description="x-MacSymbol">x-MacSymbol</option>
+                <option description="x-MacThai">x-MacThai</option>
+                <option description="x-MacTurkish">x-MacTurkish</option>
+                <option description="x-MacUkraine">x-MacUkraine</option>
+                <option description="x-PCK">x-PCK</option>
+                <option description="x-SJIS_0213">x-SJIS_0213</option>
+                <option description="x-UTF-16LE-BOM">x-UTF-16LE-BOM</option>
+                <option description="x-euc-jp-linux">x-euc-jp-linux</option>
+                <option description="x-eucJP-Open">x-eucJP-Open</option>
+                <option description="x-iso-8859-11">x-iso-8859-11</option>
+                <option description="x-mswin-936">x-mswin-936</option>
+                <option description="x-windows-50220">x-windows-50220</option>
+                <option description="x-windows-50221">x-windows-50221</option>
+                <option description="x-windows-874">x-windows-874</option>
+                <option description="x-windows-949">x-windows-949</option>
+                <option description="x-windows-950">x-windows-950</option>
+                <option description="x-windows-iso2022jp">x-windows-iso2022jp</option>
+              </selectionValues>
+              <defaultValue>UTF-8</defaultValue>
+            </field>
+            <field description="Данные для выполнения запроса PUT" editor="textarea" name="putData" nullable="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Включить аутентификацию" name="enableAuthentication" type="B">
+              <help>Данная настройка включает аутентификацию.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Имя пользователя" name="userName" type="S">
+              <help>Имя пользователя, которое будет использовано при аутентификации.</help>
+              <defaultValue/>
+            </field>
+            <field description="Пароль" editor="password" name="password" type="S">
+              <help>Пароль, который будет использован при аутентификации.</help>
+              <defaultValue/>
+            </field>
+            <field description="Домен" name="domain" type="S">
+              <help>Доменное имя, которое будет использовано при аутентификации.</help>
+              <defaultValue/>
+            </field>
+            <field description="Рабочая станция" name="workstation" type="S">
+              <help>Имя рабочей станции, которое будет использовано при аутентификации.</help>
+              <defaultValue/>
+            </field>
+            <field advanced="true" description="Прокси" name="proxy" nullable="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Использовать клиентские сертификаты" name="useKeystore" type="B">
+              <help>При использовании протокола HTTPS, активирует применение клиентского сертификата при аутентификации на сервере.</help>
+              <group>Клиентские сертификаты</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Путь к хранилищу сертификатов" name="keystoreFile" type="S">
+              <help>Путь к файлу хранилища ключей, содержащий сертификаты клиента. Это локальный путь файловой системы.</help>
+              <group>Клиентские сертификаты</group>
+              <defaultValue/>
+            </field>
+            <field description="Тип хранилища сертификатов" extendableSelectionValues="true" name="keystoreType" type="S">
+              <selectionValues>
+                <option description="PKCS12">pkcs12</option>
+                <option description="JKS">jks</option>
+              </selectionValues>
+              <help>Тип файла хранилища ключей: JKS или PKCS12.</help>
+              <group>Клиентские сертификаты</group>
+              <defaultValue>pkcs12</defaultValue>
+            </field>
+            <field description="Пароль к хранилищу сертификатов" editor="password" name="keystorePassword" type="S">
+              <help>Пароль, дешифрующий файл хранилища ключей (опционально).</help>
+              <group>Клиентские сертификаты</group>
+              <defaultValue/>
+            </field>
+            <field description="Дополнительные HTTP-заголовки" name="additionalHeaders" nullable="true" type="T">
+              <help>Дополнительная информация в составе заголовка запроса. Представляет собой таблицу с двумя полями: &apos;Имя заголовка&apos; и &apos;Значение заголовка&apos;.</help>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647">
+                    <fields>
+                      <field description="Имя" name="headerName" type="S">
+                        <help>Имя заголовка</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Значение" name="headerValue" type="S">
+                        <help>Значение заголовка</help>
+                        <defaultValue/>
+                      </field>
+                    </fields>
+                  </format>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Агент" extendableSelectionValues="true" name="agent" nullable="true" type="S">
+              <selectionValues>
+                <option description="Mozilla/3.01 (compatible;)">Mozilla/3.01 (compatible;)</option>
+                <option description="Mozilla/4.0 (compatible; MSIE 4.01)">Mozilla/4.0 (compatible; MSIE 4.01)</option>
+                <option description="Mozilla/4.0 (compatible; MSIE 5.01)">Mozilla/4.0 (compatible; MSIE 5.01)</option>
+                <option description="Mozilla/4.0 (compatible; MSIE 6.0)">Mozilla/4.0 (compatible; MSIE 6.0)</option>
+                <option description="Mozilla/5.0 Netscape6/6.01">Mozilla/5.0 Netscape6/6.01</option>
+                <option description="MSProxy/2.0">MSProxy/2.0</option>
+                <option description="Go!Zilla 3.5 (www.gozilla.com)">Go!Zilla 3.5 (www.gozilla.com)</option>
+                <option description="FlashGet">FlashGet</option>
+                <option description="Opera/5.12">Opera/5.12</option>
+                <option description="Teleport Pro/1.29">Teleport Pro/1.29</option>
+              </selectionValues>
+              <help>Строка агента пользователя</help>
+              <defaultValue>Mozilla/4.0 (compatible; MSIE 4.01)</defaultValue>
+            </field>
+            <field description="Таймаут" editor="period" name="timeout" type="L">
+              <editorOptions>0 1</editorOptions>
+              <validators contentType="base64">HEweNTAwIDIxNDc0ODM2NDcd</validators>
+              <help>Время ожидания выполнения операции HTTP сервера</help>
+              <defaultValue>10000</defaultValue>
+            </field>
+            <field advanced="true" description="Отключить расширение SNI" name="disableSNI" type="B">
+              <defaultValue>0</defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>url#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>port#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>requestMethod#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>enableAuthentication#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>additionalHeaders#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>agent#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>timeout#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>postData#enabled</reference>
+              <expression>{requestMethod} == &quot;POST&quot; &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>postData#hidden</reference>
+              <expression>{requestMethod} != &quot;POST&quot;</expression>
+            </binding>
+            <binding>
+              <reference>putData#hidden</reference>
+              <expression>{requestMethod} != &quot;PUT&quot;</expression>
+            </binding>
+            <binding>
+              <reference>putData#enabled</reference>
+              <expression>{requestMethod} == &quot;PUT&quot; &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>userName#enabled</reference>
+              <expression>{enableAuthentication} &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>password#enabled</reference>
+              <expression>{enableAuthentication} &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>domain#enabled</reference>
+              <expression>{enableAuthentication} &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>workstation#enabled</reference>
+              <expression>{enableAuthentication} &amp;&amp; {enabled}</expression>
+            </binding>
+            <binding>
+              <reference>useKeystore#enabled</reference>
+              <expression>{enabled} &amp;&amp; {protocol}==&quot;https&quot;</expression>
+            </binding>
+            <binding>
+              <reference>keystoreFile#enabled</reference>
+              <expression>{enabled} &amp;&amp; {protocol}==&quot;https&quot;</expression>
+            </binding>
+            <binding>
+              <reference>keystorePassword#enabled</reference>
+              <expression>{enabled} &amp;&amp; {protocol}==&quot;https&quot;</expression>
+            </binding>
+            <binding>
+              <reference>keystoreType#enabled</reference>
+              <expression>{enabled} &amp;&amp; {protocol}==&quot;https&quot;</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="address">apidata.mos.ru</value>
+            <value name="protocol">https</value>
+            <value name="port">443</value>
+            <value name="url">/version?api_key=2ef80b09-172f-4a75-bbd5-e5a3df5ca585</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>statisticsProperties</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Имя канала" keyfield="true" name="name" nullable="true" type="S">
+              <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HRxSHlx3K15e0JjQvNGPINC80L7QttC10YIg0YHQvtC00LXRgNC20LDRgtGMINGC0L7Qu9GM0LrQviDQu9Cw0YLQuNC90YHQutC40LUg0LHRg9C60LLRiywg0YbQuNGE0YDRiyDQuCDRgdC40LzQstC+0LvRiyDQv9C+0LTRh9C10YDQutC40LLQsNC90LjRjx0=</validators>
+              <help>Это уникальный идентификатор канала. Он используется для обращения к данным канала.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Переменная" extendableSelectionValues="true" icon="fi_variable" name="variable" type="S">
+              <help>Имя переменной, значение которой будет использовано в канале статистики.</help>
+              <defaultValue/>
+            </field>
+            <field description="Активный" name="enabled" type="B">
+              <help>Контролирует, активен ли канал и собирает ли он данные. Каналы по умолчанию нужно деактивировать вместо их удаления, чтобы предотвратить их повторное создание.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Параметры" icon="var_statistics" name="parameters" nullable="true" type="T">
+              <help>Параметры сбора статистических данных, их хранения и обработки.</help>
+              <defaultValue>
+                <table>
+                  <format maxRecords="1" minRecords="1">
+                    <fields>
+                      <field description="Выражение" editor="expression" name="expression" type="S">
+                        <defaultValue/>
+                      </field>
+                      <field description="Среднее" name="average" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Минимум" name="minimum" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Максимум" name="maximum" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Сумма" name="total" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Первое" name="first" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Последнее" name="last" type="B">
+                        <group>Агрегация</group>
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Поминутно" editor="period" name="minutelyStats" nullable="true" type="L">
+                        <editorOptions>2 3</editorOptions>
+                        <validators contentType="base64">HEweMTIwMDAwIDkyMjMzNzIwMzY4NTQ3NzU4MDcd</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>3600000</defaultValue>
+                      </field>
+                      <field description="Ежечасно" editor="period" name="hourlyStats" nullable="true" type="L">
+                        <editorOptions>3 4</editorOptions>
+                        <validators contentType="base64">HEweNzIwMDAwMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>86400000</defaultValue>
+                      </field>
+                      <field description="Ежедневно" editor="period" name="dailyStats" nullable="true" type="L">
+                        <editorOptions>4 6</editorOptions>
+                        <validators contentType="base64">HEweMTcyODAwMDAwIDkyMjMzNzIwMzY4NTQ3NzU4MDcd</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>2592000000</defaultValue>
+                      </field>
+                      <field description="Еженедельно" editor="period" name="weeklyStats" nullable="true" type="L">
+                        <editorOptions>5 8</editorOptions>
+                        <validators contentType="base64">HEweMTIwOTYwMDAwMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>7776000000</defaultValue>
+                      </field>
+                      <field description="Ежемесячно" editor="period" name="monthlyStats" nullable="true" type="L">
+                        <editorOptions>6 8</editorOptions>
+                        <validators contentType="base64">HEweNTE4NDAwMDAwMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>31536000000</defaultValue>
+                      </field>
+                      <field description="Ежегодно" editor="period" name="yearlyStats" nullable="true" type="L">
+                        <editorOptions>8 8</editorOptions>
+                        <validators contentType="base64">HEweNjMwNzIwMDAwMDAgOTIyMzM3MjAzNjg1NDc3NTgwNx0=</validators>
+                        <group>Периоды хранения</group>
+                        <defaultValue>315360000000</defaultValue>
+                      </field>
+                      <field description="Выражение временной метки" editor="expression" name="timestampExpression" nullable="true" type="S">
+                        <help>Используйте это выражение для переопределения временной метки каждого нового значения переменной. Выражение должно возвращать значение типа Date.</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>{#timestamp}</defaultValue>
+                      </field>
+                      <field description="Использовать ключевое поле" name="useKeyField" type="B">
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Ключевое поле" name="keyField" nullable="true" type="S">
+                        <help>Автоопределение, если значение NULL</help>
+                        <defaultValue>
+                          <nullValue/>
+                        </defaultValue>
+                      </field>
+                      <field description="Обработка NULL-значений" name="nullValuesProcessing" type="I">
+                        <selectionValues>
+                          <option description="Исключать">1</option>
+                          <option description="Приводить к нулю">2</option>
+                        </selectionValues>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Обработка выпадающих из диапазона значений" name="outOfRangeValuesHandling" type="I">
+                        <selectionValues>
+                          <option description="Ничего не делать">0</option>
+                          <option description="Исключать">1</option>
+                          <option description="Нормализовать">3</option>
+                        </selectionValues>
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Минимальное значение" name="minValue" type="E">
+                        <defaultValue>0.0</defaultValue>
+                      </field>
+                      <field description="Максимальное значение" name="maxValue" type="E">
+                        <defaultValue>1.0</defaultValue>
+                      </field>
+                      <field description="Хранение" name="storage" type="I">
+                        <selectionValues>
+                          <option description="Стандартный файл (меньше памяти, медленнее)">0</option>
+                          <option description="Отображаемый файл (больше памяти, быстрее)">1</option>
+                          <option description="Память (без сохранения)">2</option>
+                          <option description="NoSQL хранилище">3</option>
+                        </selectionValues>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Тип" name="type" type="S">
+                        <selectionValues>
+                          <option description="Индикатор">GAUGE</option>
+                          <option description="Счетчик с переполнением">COUNTER</option>
+                          <option description="Счетчик без переполнения">DERIVE</option>
+                          <option description="Сбрасываемый счетчик">ABSOLUTE</option>
+                        </selectionValues>
+                        <defaultValue>GAUGE</defaultValue>
+                      </field>
+                      <field description="Защитить статистику" name="protectStatistics" type="B">
+                        <help>Отключить параметры, изменения которых сбрасывают данные статистики</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>1</defaultValue>
+                      </field>
+                      <field description="Шаг" editor="period" name="step" type="L">
+                        <editorOptions>1 1</editorOptions>
+                        <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <help>Изменение этого значения приведет к обнулению данных статистики</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>60000</defaultValue>
+                      </field>
+                      <field description="Коэффициент XFiles" name="xff" type="F">
+                        <validators contentType="base64">HEweMC4wIDAuOTk5HQ==</validators>
+                        <help>Изменение этого значения приведет к обнулению данных статистики</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>0.9</defaultValue>
+                      </field>
+                      <field description="Пульс" editor="period" name="heartbeat" type="L">
+                        <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <help>Максимальный интервал времени между двумя обновлениями. При его превышении промежуточные интервалы помечаются как &apos;unknown&apos;. &apos;0&apos; - выставлять автоматически.</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Срок жизни неактуальных ключей" editor="period" name="missedKeysLifespan" type="L">
+                        <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                        <help>Период времени, в течение которого будет храниться архив данных по отсутствующему ключу. Если ключ отсутствует в течение более короткого периода времени, а затем снова появляется, связанные с ним данные сохранятся. Нулевое значение означает удаление данных сразу после исчезновения ключа</help>
+                        <group>Дополнительные свойства</group>
+                        <defaultValue>1209600000</defaultValue>
+                      </field>
+                    </fields>
+                    <bindings>
+                      <binding>
+                        <reference>keyField#hidden</reference>
+                        <expression>!{useKeyField}</expression>
+                      </binding>
+                      <binding>
+                        <reference>minValue#hidden</reference>
+                        <expression>{outOfRangeValuesHandling} == 0</expression>
+                      </binding>
+                      <binding>
+                        <reference>maxValue#hidden</reference>
+                        <expression>{outOfRangeValuesHandling} == 0</expression>
+                      </binding>
+                      <binding>
+                        <reference>step#enabled</reference>
+                        <expression>!{protectStatistics}</expression>
+                      </binding>
+                      <binding>
+                        <reference>xff#enabled</reference>
+                        <expression>!{protectStatistics}</expression>
+                      </binding>
+                    </bindings>
+                    <validators contentType="base64">HEUeZTIxcGJsWmhiSFZsZlNBOElIdHRZWGhXWVd4MVpYMGdQeUJ1ZFd4c0lEb2dKOHpvN2VqczRPdjg3ZTdsSU9mdDRQZmw3ZWpsSU9UdTYrYnQ3aURoKy9MOElPemw3Zno0NVNETTRPcng2T3pnNi96dDd1UHVJT2Z0NFBmbDdlai9Kdz09HQ==</validators>
+                  </format>
+                  <records>
+                    <record>
+                      <value name="timestampExpression">
+                        <nullValue/>
+                      </value>
+                    </record>
+                  </records>
+                </table>
+              </defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>variable#choices</reference>
+              <expression>{utilities:variablesByMask({.:})}</expression>
+            </binding>
+          </bindings>
+          <validators contentType="base64">HEseHQ==</validators>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>ccmConfigurationManagement</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Активный" name="ccmEnabled" type="B">
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Выражение сохранения конфигурации" editor="expression" name="ccmExpressionBackup" type="S">
+              <defaultValue>{readConfiguration({configurationType})}</defaultValue>
+            </field>
+            <field description="Выражение восстановления конфигурации" editor="expression" name="ccmExpressionRestore" type="S">
+              <defaultValue>{writeConfiguration({env/sequenceType}, {env/configurationType}, {env/configuration}, {env/restoreParameters})}</defaultValue>
+            </field>
+            <field description="Максимальное количество сохранённых конфигураций" name="ccmMaxConfigurationsNumber" type="I">
+              <validators contentType="base64">HEweMCAyMTQ3NDgzNjQ3HQ==</validators>
+              <defaultValue>8</defaultValue>
+            </field>
+            <field description="Последовательность резервного копирования" name="ccmBackupSequence" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Параметры резервного копирования" name="ccmBackupParameters" type="T">
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647"/>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Последовательность восстановления" name="ccmRestoreSequence" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Параметры восстановления" name="ccmRestoreParameters" type="T">
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647"/>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Фильтр сравнения" name="ccmComparisonFilter" type="S">
+              <help>Регулярное выражение для данных, которые должны быть исключены из сравнения конфигураций.</help>
+              <defaultValue/>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>ccmBackupSequence#choices</reference>
+              <expression>{utilities:selectionValues(&quot;{utilities:ccmConfigurations()}&quot;, &quot;{name}&quot;,&quot;{name}&quot;)}</expression>
+            </binding>
+            <binding>
+              <reference>ccmRestoreSequence#choices</reference>
+              <expression>{utilities:selectionValues(&quot;{utilities:ccmConfigurations()}&quot;, &quot;{name}&quot;,&quot;{name}&quot;)}</expression>
+            </binding>
+            <binding>
+              <reference>ccmBackupParameters</reference>
+              <expression>{utilities:createDataTableByScriptName({ccmBackupSequence},&quot;backupParametersFormat&quot;,{ccmBackupParameters})}</expression>
+            </binding>
+            <binding>
+              <reference>ccmRestoreParameters</reference>
+              <expression>{utilities:createDataTableByScriptName({ccmRestoreSequence},&quot;restoreParametersFormat&quot;,{ccmRestoreParameters})}</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="ccmBackupSequence">Cisco</value>
+            <value name="ccmBackupParameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Configuration Type" extendableSelectionValues="true" name="configurationType" type="S">
+                      <selectionValues>
+                        <option description="Running">Running</option>
+                        <option description="Startup">Startup</option>
+                      </selectionValues>
+                      <defaultValue>Running</defaultValue>
+                    </field>
+                    <field description="Control Protocol" extendableSelectionValues="true" name="controlProtocol" type="S">
+                      <selectionValues>
+                        <option description="SNMP">SNMP</option>
+                        <option description="SSH">SSH</option>
+                        <option description="Telnet">Telnet</option>
+                      </selectionValues>
+                      <defaultValue>Telnet</defaultValue>
+                    </field>
+                    <field description="Transport Protocol" extendableSelectionValues="true" name="transportProtocol" type="S">
+                      <selectionValues>
+                        <option description="SCP">SCP</option>
+                        <option description="Shell">Shell</option>
+                        <option description="FTP">FTP</option>
+                        <option description="TFTP">TFTP</option>
+                      </selectionValues>
+                      <defaultValue>Shell</defaultValue>
+                    </field>
+                    <field description="Telnet Port" name="telnetPort" type="I">
+                      <defaultValue>23</defaultValue>
+                    </field>
+                    <field description="SSH Port" name="sshPort" type="I">
+                      <defaultValue>22</defaultValue>
+                    </field>
+                    <field description="Connection Timeout" name="connectionTimeout" type="I">
+                      <defaultValue>30000</defaultValue>
+                    </field>
+                    <field description="Read Timeout" name="readTimeout" type="I">
+                      <defaultValue>5000</defaultValue>
+                    </field>
+                    <field description="User Name" name="username" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Password" editor="password" name="password" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Privileged Password" editor="password" name="privilegedPassword" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="SSH Username" name="sshUsername" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="SSH Password" editor="password" name="sshPassword" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="File Name" name="filename" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Разделитель строки" name="eolDelimiter" type="S">
+                      <selectionValues>
+                        <option description="LF">\n</option>
+                        <option description="CR+LF">\r\n</option>
+                      </selectionValues>
+                      <help>Используйте значение &apos;CR+LF&apos; для протокола управления &apos;SSH&apos;, а&apos;LF&apos; для остальных протоколов.</help>
+                      <defaultValue>\r\n</defaultValue>
+                    </field>
+                  </fields>
+                  <bindings>
+                    <binding>
+                      <reference>eolDelimiter</reference>
+                      <expression>({username} == &quot;&quot;) ? (({controlProtocol} != &quot;SSH&quot;) ? &quot;\\n&quot; : &quot;\\r\\n&quot; ) : ({eolDelimiter})</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshUsername#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshPassword#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshPort#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>telnetPort#hidden</reference>
+                      <expression>({controlProtocol} != &quot;Telnet&quot;)</expression>
+                    </binding>
+                  </bindings>
+                </format>
+              </table>
+            </value>
+            <value name="ccmRestoreSequence">Cisco</value>
+            <value name="ccmRestoreParameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Configuration Type" extendableSelectionValues="true" name="configurationType" type="S">
+                      <selectionValues>
+                        <option description="Running">Running</option>
+                        <option description="Startup">Startup</option>
+                      </selectionValues>
+                      <defaultValue>Running</defaultValue>
+                    </field>
+                    <field description="Control Protocol" extendableSelectionValues="true" name="controlProtocol" type="S">
+                      <selectionValues>
+                        <option description="SNMP">SNMP</option>
+                        <option description="SSH">SSH</option>
+                        <option description="Telnet">Telnet</option>
+                      </selectionValues>
+                      <defaultValue>Telnet</defaultValue>
+                    </field>
+                    <field description="Transport Protocol" extendableSelectionValues="true" name="transportProtocol" type="S">
+                      <selectionValues>
+                        <option description="SCP">SCP</option>
+                        <option description="Shell">Shell</option>
+                        <option description="FTP">FTP</option>
+                        <option description="TFTP">TFTP</option>
+                      </selectionValues>
+                      <defaultValue>Shell</defaultValue>
+                    </field>
+                    <field description="Telnet Port" name="telnetPort" type="I">
+                      <defaultValue>23</defaultValue>
+                    </field>
+                    <field description="SSH Port" name="sshPort" type="I">
+                      <defaultValue>22</defaultValue>
+                    </field>
+                    <field description="Connection Timeout" name="connectionTimeout" type="I">
+                      <defaultValue>30000</defaultValue>
+                    </field>
+                    <field description="Read Timeout" name="readTimeout" type="I">
+                      <defaultValue>5000</defaultValue>
+                    </field>
+                    <field description="User Name" name="username" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Password" editor="password" name="password" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Privileged Password" editor="password" name="privilegedPassword" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="SSH Username" name="sshUsername" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="SSH Password" editor="password" name="sshPassword" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="File Name" name="filename" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Разделитель строки" name="eolDelimiter" type="S">
+                      <selectionValues>
+                        <option description="LF">\n</option>
+                        <option description="CR+LF">\r\n</option>
+                      </selectionValues>
+                      <help>Используйте значение &apos;CR+LF&apos; для протокола управления &apos;SSH&apos;, а&apos;LF&apos; для остальных протоколов.</help>
+                      <defaultValue>\r\n</defaultValue>
+                    </field>
+                  </fields>
+                  <bindings>
+                    <binding>
+                      <reference>eolDelimiter</reference>
+                      <expression>({username} == &quot;&quot;) ? (({controlProtocol} != &quot;SSH&quot;) ? &quot;\\n&quot; : &quot;\\r\\n&quot; ) : ({eolDelimiter})</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshUsername#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshPassword#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>sshPort#hidden</reference>
+                      <expression>({controlProtocol} != &quot;SSH&quot; &amp;&amp; {transportProtocol} != &quot;SCP&quot;)</expression>
+                    </binding>
+                    <binding>
+                      <reference>telnetPort#hidden</reference>
+                      <expression>({controlProtocol} != &quot;Telnet&quot;)</expression>
+                    </binding>
+                  </bindings>
+                </format>
+              </table>
+            </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>managedVariables</string>
+      <table>
+        <format maxRecords="2147483647" unresizable="true">
+          <fields>
+            <field description="Имя" name="name" readonly="true" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Описание" name="description" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Группа" name="group" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Активный" name="active" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+          </fields>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>settingSyncOptions</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Имя" keyfield="true" name="name" readonly="true" type="S">
+              <help>Имя переменной устройства</help>
+              <defaultValue/>
+            </field>
+            <field description="Описание" name="description" readonly="true" type="S">
+              <help>Описание переменной устройства</help>
+              <defaultValue/>
+            </field>
+            <field description="Режим синхронизации" name="mode" type="I">
+              <selectionValues>
+                <option description="Обычная синхронизация">0</option>
+                <option description="Синхронизация отключена">1</option>
+                <option description="Только от устройства к серверу">5</option>
+                <option description="Прямой доступ к устройству">2</option>
+                <option description="Прямая запись в устройство">6</option>
+                <option description="Использовать мастер-копию настройки">3</option>
+                <option description="Игнорировать время модификации">4</option>
+                <option description="Нестандартный">100</option>
+              </selectionValues>
+              <help>Определяет режим синхронизации переменной устройства.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Время хранения истории" editor="period" name="updateHistoryStorageTime" nullable="true" type="L">
+              <editorOptions>3 8</editorOptions>
+              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+              <help>Если данная опция установлена на ненулевое значение (т.е. хранение истории обновлений активировано), постоянное событие &apos;Обновление переменной&apos; будет появляться каждый раз, когда заданное значение изменено. Это может происходить, если новое значение, отличающееся от предыдущего, считывается с удаленного устройства, или какой-либо компонент системы модифицирует её. Сохранение истории отключено по умолчанию во избежание лавинообразного увеличения размера базы данных.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Режим записи истории" extendableSelectionValues="true" name="historyRate" type="I">
+              <selectionValues>
+                <option description="Изменившиеся значения с признаком качества &quot;Хороший&quot;">-1</option>
+                <option description="Все значения с признаком качества &quot;Хороший&quot;">0</option>
+                <option description="Изменившиеся значения, кроме признака качества &quot;Не подключён&quot;">-3</option>
+                <option description="Все значения с признаком качества &quot;Хороший&quot; или &quot;Не подключён&quot;">-4</option>
+                <option description="Все значения, кроме признака качества &quot;Не подключён&quot;">-5</option>
+                <option description="Изменившиеся значения">-6</option>
+                <option description="Все значения">-7</option>
+              </selectionValues>
+              <help>Если установлен на &apos;Только при изменениях&apos; (-1), историческое значение сохраняется (и формируется событие &apos;Обновление переменной&apos;), только если значение, считываемое с устройства во время текущей синхронизации, отличается от предыдущего (кэшированного) значения. Опция &apos;Все значения&apos; (0) позволяет сохранять историю во время каждой синхронизации переменной. Если выставлен на любое положительное целое число, исторические значения будут сохраняться в базу данных только каждый энный цикл синхронизации, где N - это значение &apos;Режима записи истории&apos;.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Период синхронизации" editor="period" name="syncPeriod" nullable="true" type="L">
+              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+              <help>Данная опция может использоваться для определения периода синхронизации переменной устройства. Значение по умолчанию - NULL (&lt;Not set&gt;) означает, что переменная будет синхронизирована только во время полного цикла синхронизации.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Доставлять обновления" name="deliverUpdates" type="B">
+              <help>Данный флаг управляет отправкой событий обновления переменной. Если флаг активен, то события об обновлении переменной будут оправляться при каждой синхронизации, даже если значение переменной осталось прежним.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Условие синхронизации" editor="expression" name="condition" nullable="true" type="S">
+              <help>Если задано выражение и результат его вычисления FALSE, то синхронизация пропускается.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Фильтр" editor="expression" name="filter" nullable="true" type="S">
+              <help>Если выражение фильтра возвращает FALSE, значение будет отклонено. Если выражение фильтра возвращает таблицу, она будет обработана как сконвертированное значение переменной устройства.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Выражение мастер-копии" editor="expression" name="master" nullable="true" type="S">
+              <help>Выражение, используемое для извлечения значения и записи его на устройстве, если выбран режим синхронизации &apos;Использовать мастер-копию настройки&apos;.</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Добавить предыдущее значение в событие обновления переменной" name="addPreviousValueToVariableUpdateEvent" type="B">
+              <help>Флаг, указывающий, что событие обновления переменной будет содержать предыдущее значение переменной</help>
+              <defaultValue>0</defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>master#enabled</reference>
+              <expression>{mode} == 3</expression>
+            </binding>
+            <binding>
+              <reference>filter#options</reference>
+              <expression>expressionEditorOptions({.:}, {name}, 1)</expression>
+            </binding>
+            <binding>
+              <reference>condition#options</reference>
+              <expression>expressionEditorOptions({.:}, {name}, 1)</expression>
+            </binding>
+            <binding>
+              <reference>master#options</reference>
+              <expression>expressionEditorOptions({.:}, {name}, 1)</expression>
+            </binding>
+            <binding>
+              <reference>deliverUpdates#enabled</reference>
+              <expression>{historyRate} == -1</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="name">http</value>
+            <value name="description">HTTP-сервер</value>
+            <value name="updateHistoryStorageTime">31536000000</value>
+            <value name="syncPeriod">600000</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>managedEvents</string>
+      <table>
+        <format maxRecords="2147483647" unresizable="true">
+          <fields>
+            <field description="Имя" name="name" readonly="true" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Описание" name="description" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Группа" name="group" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Активный" name="active" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+          </fields>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>genericProperties</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Имя устройства" name="name" notReplicated="true" type="S">
+              <validators contentType="base64">HFIeXHcrXl7QmNC80Y8g0LzQvtC20LXRgiDRgdC+0LTQtdGA0LbQsNGC0Ywg0YLQvtC70YzQutC+INC70LDRgtC40L3RgdC60LjQtSDQsdGD0LrQstGLLCDRhtC40YTRgNGLINC4INGB0LjQvNCy0L7Qu9GLINC/0L7QtNGH0LXRgNC60LjQstCw0L3QuNGPHRxMHjEgNTAd</validators>
+              <help>Имя контекста устройства, необходимое для ссылки на устройство из других частей системы. Имя должно удовлетворять правилам именования контекстов. Предупреждение: изменение имени приведет к неработоспособности всех ссылок на устройство.</help>
+              <defaultValue/>
+            </field>
+            <field description="Описание устройства" name="description" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMCAxMDAdHFIeW15ccHtDbnRybH1dKl5e0J7Qv9C40YHQsNC90LjQtSDQvNC+0LbQtdGCINGB0L7QtNC10YDQttCw0YLRjCDRgtC+0LvRjNC60L4g0L/QtdGH0LDRgtC90YvQtSDRgdC40LzQstC+0LvRix0=</validators>
+              <help>Необязательное текстовое описание устройства. Может указывать на тип, местоположение, назначение или другие важные характеристики устройства.</help>
+              <defaultValue/>
+            </field>
+            <field advanced="true" description="Показывать полное описание устройства" name="showFullDeviceDescription" type="B">
+              <help>Показывать полное описание устройства в дереве контекстов</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Тип устройства" name="type" type="S">
+              <selectionValues>
+                <option description="Стандартный">generic</option>
+                <option description="Маршрутизатор">router</option>
+                <option description="Коммутатор">switch</option>
+                <option description="Принтер">printer</option>
+                <option description="Рабочая станция">workstation</option>
+                <option description="Сервер">server</option>
+                <option description="ИБП">ups</option>
+              </selectionValues>
+              <help>В большинстве случае тип устройства определяется автоматически, но иногда может быть необходимо задать его вручную, чтобы обеспечить правильную обработку данных устройства. Стандартный тип устройства отключает какую-либо особую обработку данных или связь с устройством.</help>
+              <defaultValue>generic</defaultValue>
+            </field>
+            <field description="Период синхронизации" editor="period" name="syncPeriod" type="L">
+              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+              <help>Этот параметр определяет как часто производится полная синхронизация устройства с сервером. Тем не менее, индивидуальные настройки устройства могут иметь нестандартный период синхронизации, заданный в разделе Параметры синхронизации настроек устройства.</help>
+              <group>Синхронизация</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Выполнять синхронизацию при изменении параметров" name="startSyncOnSettingChange" type="B">
+              <help>Этот параметр определят, будет ли запускаться процесс синхронизации при изменении какого-либо параметра устройства.</help>
+              <group>Синхронизация</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field advanced="true" description="Прерывать синхронизацию и переподключаться при ошибке" name="interruptOnError" type="B">
+              <help>Вызывает остановку процесса синхронизации при любой ошибке. Также заставляет сервер отсоединиться и заново присоединиться к устройству во начале следующей синхронизации. Включение этой опции может быть полезно, если ошибка связи или внутренняя ошибка устройства при синхронизации одной настройки часто вызывают сбой синхронизации всех последующих настроек.</help>
+              <group>Синхронизация</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Устройство неактивно" name="suspend" type="B">
+              <help>Приостановка синхронизации сервера с устройством. Неактивное устройство никогда не синхронизируются с сервером.</help>
+              <group>Синхронизация</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Отключить чтение/запись настроек при синхронизации" name="disableSynchronousSettingValueRW" type="B">
+              <help>В процессе синхронизации устройства синхронизация (чтение/запись) настроек производиться не будет. Обычно применяется, если настройки обновляются асинхронно.</help>
+              <group>Синхронизация</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Включить расширенную статусную информацию" name="extendedStatus" type="B">
+              <help>Включает расширенную информацию о текущей синхронизации в статус устройства.</help>
+              <group>Синхронизация</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Временная зона" name="timeZone" nullable="true" type="S">
+              <selectionValues>
+                <option description="&lt;Не выбрано&gt;">
+                  <nullValue/>
+                </option>
+                <option description="GMT+00:00, Africa/Abidjan">Africa/Abidjan</option>
+                <option description="GMT+00:00, Africa/Accra">Africa/Accra</option>
+                <option description="GMT+03:00, Africa/Addis_Ababa">Africa/Addis_Ababa</option>
+                <option description="GMT+01:00, Africa/Algiers">Africa/Algiers</option>
+                <option description="GMT+03:00, Africa/Asmara">Africa/Asmara</option>
+                <option description="GMT+03:00, Africa/Asmera">Africa/Asmera</option>
+                <option description="GMT+00:00, Africa/Bamako">Africa/Bamako</option>
+                <option description="GMT+01:00, Africa/Bangui">Africa/Bangui</option>
+                <option description="GMT+00:00, Africa/Banjul">Africa/Banjul</option>
+                <option description="GMT+00:00, Africa/Bissau">Africa/Bissau</option>
+                <option description="GMT+02:00, Africa/Blantyre">Africa/Blantyre</option>
+                <option description="GMT+01:00, Africa/Brazzaville">Africa/Brazzaville</option>
+                <option description="GMT+02:00, Africa/Bujumbura">Africa/Bujumbura</option>
+                <option description="GMT+02:00, Africa/Cairo, with DST">Africa/Cairo</option>
+                <option description="GMT+00:00, Africa/Casablanca">Africa/Casablanca</option>
+                <option description="GMT+01:00, Africa/Ceuta, with DST">Africa/Ceuta</option>
+                <option description="GMT+00:00, Africa/Conakry">Africa/Conakry</option>
+                <option description="GMT+00:00, Africa/Dakar">Africa/Dakar</option>
+                <option description="GMT+03:00, Africa/Dar_es_Salaam">Africa/Dar_es_Salaam</option>
+                <option description="GMT+03:00, Africa/Djibouti">Africa/Djibouti</option>
+                <option description="GMT+01:00, Africa/Douala">Africa/Douala</option>
+                <option description="GMT+00:00, Africa/El_Aaiun">Africa/El_Aaiun</option>
+                <option description="GMT+00:00, Africa/Freetown">Africa/Freetown</option>
+                <option description="GMT+02:00, Africa/Gaborone">Africa/Gaborone</option>
+                <option description="GMT+02:00, Africa/Harare">Africa/Harare</option>
+                <option description="GMT+02:00, Africa/Johannesburg">Africa/Johannesburg</option>
+                <option description="GMT+02:00, Africa/Juba">Africa/Juba</option>
+                <option description="GMT+03:00, Africa/Kampala">Africa/Kampala</option>
+                <option description="GMT+02:00, Africa/Khartoum">Africa/Khartoum</option>
+                <option description="GMT+02:00, Africa/Kigali">Africa/Kigali</option>
+                <option description="GMT+01:00, Africa/Kinshasa">Africa/Kinshasa</option>
+                <option description="GMT+01:00, Africa/Lagos">Africa/Lagos</option>
+                <option description="GMT+01:00, Africa/Libreville">Africa/Libreville</option>
+                <option description="GMT+00:00, Africa/Lome">Africa/Lome</option>
+                <option description="GMT+01:00, Africa/Luanda">Africa/Luanda</option>
+                <option description="GMT+02:00, Africa/Lubumbashi">Africa/Lubumbashi</option>
+                <option description="GMT+02:00, Africa/Lusaka">Africa/Lusaka</option>
+                <option description="GMT+01:00, Africa/Malabo">Africa/Malabo</option>
+                <option description="GMT+02:00, Africa/Maputo">Africa/Maputo</option>
+                <option description="GMT+02:00, Africa/Maseru">Africa/Maseru</option>
+                <option description="GMT+02:00, Africa/Mbabane">Africa/Mbabane</option>
+                <option description="GMT+03:00, Africa/Mogadishu">Africa/Mogadishu</option>
+                <option description="GMT+00:00, Africa/Monrovia">Africa/Monrovia</option>
+                <option description="GMT+03:00, Africa/Nairobi">Africa/Nairobi</option>
+                <option description="GMT+01:00, Africa/Ndjamena">Africa/Ndjamena</option>
+                <option description="GMT+01:00, Africa/Niamey">Africa/Niamey</option>
+                <option description="GMT+00:00, Africa/Nouakchott">Africa/Nouakchott</option>
+                <option description="GMT+00:00, Africa/Ouagadougou">Africa/Ouagadougou</option>
+                <option description="GMT+01:00, Africa/Porto-Novo">Africa/Porto-Novo</option>
+                <option description="GMT+00:00, Africa/Sao_Tome">Africa/Sao_Tome</option>
+                <option description="GMT+00:00, Africa/Timbuktu">Africa/Timbuktu</option>
+                <option description="GMT+02:00, Africa/Tripoli">Africa/Tripoli</option>
+                <option description="GMT+01:00, Africa/Tunis">Africa/Tunis</option>
+                <option description="GMT+02:00, Africa/Windhoek">Africa/Windhoek</option>
+                <option description="GMT-10:00, America/Adak, with DST">America/Adak</option>
+                <option description="GMT-09:00, America/Anchorage, with DST">America/Anchorage</option>
+                <option description="GMT-04:00, America/Anguilla">America/Anguilla</option>
+                <option description="GMT-04:00, America/Antigua">America/Antigua</option>
+                <option description="GMT-03:00, America/Araguaina">America/Araguaina</option>
+                <option description="GMT-03:00, America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</option>
+                <option description="GMT-03:00, America/Argentina/Catamarca">America/Argentina/Catamarca</option>
+                <option description="GMT-03:00, America/Argentina/ComodRivadavia">America/Argentina/ComodRivadavia</option>
+                <option description="GMT-03:00, America/Argentina/Cordoba">America/Argentina/Cordoba</option>
+                <option description="GMT-03:00, America/Argentina/Jujuy">America/Argentina/Jujuy</option>
+                <option description="GMT-03:00, America/Argentina/La_Rioja">America/Argentina/La_Rioja</option>
+                <option description="GMT-03:00, America/Argentina/Mendoza">America/Argentina/Mendoza</option>
+                <option description="GMT-03:00, America/Argentina/Rio_Gallegos">America/Argentina/Rio_Gallegos</option>
+                <option description="GMT-03:00, America/Argentina/Salta">America/Argentina/Salta</option>
+                <option description="GMT-03:00, America/Argentina/San_Juan">America/Argentina/San_Juan</option>
+                <option description="GMT-03:00, America/Argentina/San_Luis">America/Argentina/San_Luis</option>
+                <option description="GMT-03:00, America/Argentina/Tucuman">America/Argentina/Tucuman</option>
+                <option description="GMT-03:00, America/Argentina/Ushuaia">America/Argentina/Ushuaia</option>
+                <option description="GMT-04:00, America/Aruba">America/Aruba</option>
+                <option description="GMT-04:00, America/Asuncion, with DST">America/Asuncion</option>
+                <option description="GMT-05:00, America/Atikokan">America/Atikokan</option>
+                <option description="GMT-10:00, America/Atka, with DST">America/Atka</option>
+                <option description="GMT-03:00, America/Bahia">America/Bahia</option>
+                <option description="GMT-06:00, America/Bahia_Banderas">America/Bahia_Banderas</option>
+                <option description="GMT-04:00, America/Barbados">America/Barbados</option>
+                <option description="GMT-03:00, America/Belem">America/Belem</option>
+                <option description="GMT-06:00, America/Belize">America/Belize</option>
+                <option description="GMT-04:00, America/Blanc-Sablon">America/Blanc-Sablon</option>
+                <option description="GMT-04:00, America/Boa_Vista">America/Boa_Vista</option>
+                <option description="GMT-05:00, America/Bogota">America/Bogota</option>
+                <option description="GMT-07:00, America/Boise, with DST">America/Boise</option>
+                <option description="GMT-03:00, America/Buenos_Aires">America/Buenos_Aires</option>
+                <option description="GMT-07:00, America/Cambridge_Bay, with DST">America/Cambridge_Bay</option>
+                <option description="GMT-04:00, America/Campo_Grande">America/Campo_Grande</option>
+                <option description="GMT-05:00, America/Cancun">America/Cancun</option>
+                <option description="GMT-04:00, America/Caracas">America/Caracas</option>
+                <option description="GMT-03:00, America/Catamarca">America/Catamarca</option>
+                <option description="GMT-03:00, America/Cayenne">America/Cayenne</option>
+                <option description="GMT-05:00, America/Cayman">America/Cayman</option>
+                <option description="GMT-06:00, America/Chicago, with DST">America/Chicago</option>
+                <option description="GMT-06:00, America/Chihuahua">America/Chihuahua</option>
+                <option description="GMT-07:00, America/Ciudad_Juarez, with DST">America/Ciudad_Juarez</option>
+                <option description="GMT-05:00, America/Coral_Harbour">America/Coral_Harbour</option>
+                <option description="GMT-03:00, America/Cordoba">America/Cordoba</option>
+                <option description="GMT-06:00, America/Costa_Rica">America/Costa_Rica</option>
+                <option description="GMT-07:00, America/Creston">America/Creston</option>
+                <option description="GMT-04:00, America/Cuiaba">America/Cuiaba</option>
+                <option description="GMT-04:00, America/Curacao">America/Curacao</option>
+                <option description="GMT+00:00, America/Danmarkshavn">America/Danmarkshavn</option>
+                <option description="GMT-07:00, America/Dawson">America/Dawson</option>
+                <option description="GMT-07:00, America/Dawson_Creek">America/Dawson_Creek</option>
+                <option description="GMT-07:00, America/Denver, with DST">America/Denver</option>
+                <option description="GMT-05:00, America/Detroit, with DST">America/Detroit</option>
+                <option description="GMT-04:00, America/Dominica">America/Dominica</option>
+                <option description="GMT-07:00, America/Edmonton, with DST">America/Edmonton</option>
+                <option description="GMT-05:00, America/Eirunepe">America/Eirunepe</option>
+                <option description="GMT-06:00, America/El_Salvador">America/El_Salvador</option>
+                <option description="GMT-08:00, America/Ensenada, with DST">America/Ensenada</option>
+                <option description="GMT-07:00, America/Fort_Nelson">America/Fort_Nelson</option>
+                <option description="GMT-05:00, America/Fort_Wayne, with DST">America/Fort_Wayne</option>
+                <option description="GMT-03:00, America/Fortaleza">America/Fortaleza</option>
+                <option description="GMT-04:00, America/Glace_Bay, with DST">America/Glace_Bay</option>
+                <option description="GMT-02:00, America/Godthab, with DST">America/Godthab</option>
+                <option description="GMT-04:00, America/Goose_Bay, with DST">America/Goose_Bay</option>
+                <option description="GMT-05:00, America/Grand_Turk, with DST">America/Grand_Turk</option>
+                <option description="GMT-04:00, America/Grenada">America/Grenada</option>
+                <option description="GMT-04:00, America/Guadeloupe">America/Guadeloupe</option>
+                <option description="GMT-06:00, America/Guatemala">America/Guatemala</option>
+                <option description="GMT-05:00, America/Guayaquil">America/Guayaquil</option>
+                <option description="GMT-04:00, America/Guyana">America/Guyana</option>
+                <option description="GMT-04:00, America/Halifax, with DST">America/Halifax</option>
+                <option description="GMT-05:00, America/Havana, with DST">America/Havana</option>
+                <option description="GMT-07:00, America/Hermosillo">America/Hermosillo</option>
+                <option description="GMT-05:00, America/Indiana/Indianapolis, with DST">America/Indiana/Indianapolis</option>
+                <option description="GMT-06:00, America/Indiana/Knox, with DST">America/Indiana/Knox</option>
+                <option description="GMT-05:00, America/Indiana/Marengo, with DST">America/Indiana/Marengo</option>
+                <option description="GMT-05:00, America/Indiana/Petersburg, with DST">America/Indiana/Petersburg</option>
+                <option description="GMT-06:00, America/Indiana/Tell_City, with DST">America/Indiana/Tell_City</option>
+                <option description="GMT-05:00, America/Indiana/Vevay, with DST">America/Indiana/Vevay</option>
+                <option description="GMT-05:00, America/Indiana/Vincennes, with DST">America/Indiana/Vincennes</option>
+                <option description="GMT-05:00, America/Indiana/Winamac, with DST">America/Indiana/Winamac</option>
+                <option description="GMT-05:00, America/Indianapolis, with DST">America/Indianapolis</option>
+                <option description="GMT-07:00, America/Inuvik, with DST">America/Inuvik</option>
+                <option description="GMT-05:00, America/Iqaluit, with DST">America/Iqaluit</option>
+                <option description="GMT-05:00, America/Jamaica">America/Jamaica</option>
+                <option description="GMT-03:00, America/Jujuy">America/Jujuy</option>
+                <option description="GMT-09:00, America/Juneau, with DST">America/Juneau</option>
+                <option description="GMT-05:00, America/Kentucky/Louisville, with DST">America/Kentucky/Louisville</option>
+                <option description="GMT-05:00, America/Kentucky/Monticello, with DST">America/Kentucky/Monticello</option>
+                <option description="GMT-06:00, America/Knox_IN, with DST">America/Knox_IN</option>
+                <option description="GMT-04:00, America/Kralendijk">America/Kralendijk</option>
+                <option description="GMT-04:00, America/La_Paz">America/La_Paz</option>
+                <option description="GMT-05:00, America/Lima">America/Lima</option>
+                <option description="GMT-08:00, America/Los_Angeles, with DST">America/Los_Angeles</option>
+                <option description="GMT-05:00, America/Louisville, with DST">America/Louisville</option>
+                <option description="GMT-04:00, America/Lower_Princes">America/Lower_Princes</option>
+                <option description="GMT-03:00, America/Maceio">America/Maceio</option>
+                <option description="GMT-06:00, America/Managua">America/Managua</option>
+                <option description="GMT-04:00, America/Manaus">America/Manaus</option>
+                <option description="GMT-04:00, America/Marigot">America/Marigot</option>
+                <option description="GMT-04:00, America/Martinique">America/Martinique</option>
+                <option description="GMT-06:00, America/Matamoros, with DST">America/Matamoros</option>
+                <option description="GMT-07:00, America/Mazatlan">America/Mazatlan</option>
+                <option description="GMT-03:00, America/Mendoza">America/Mendoza</option>
+                <option description="GMT-06:00, America/Menominee, with DST">America/Menominee</option>
+                <option description="GMT-06:00, America/Merida">America/Merida</option>
+                <option description="GMT-09:00, America/Metlakatla, with DST">America/Metlakatla</option>
+                <option description="GMT-06:00, America/Mexico_City">America/Mexico_City</option>
+                <option description="GMT-03:00, America/Miquelon, with DST">America/Miquelon</option>
+                <option description="GMT-04:00, America/Moncton, with DST">America/Moncton</option>
+                <option description="GMT-06:00, America/Monterrey">America/Monterrey</option>
+                <option description="GMT-03:00, America/Montevideo">America/Montevideo</option>
+                <option description="GMT-05:00, America/Montreal, with DST">America/Montreal</option>
+                <option description="GMT-04:00, America/Montserrat">America/Montserrat</option>
+                <option description="GMT-05:00, America/Nassau, with DST">America/Nassau</option>
+                <option description="GMT-05:00, America/New_York, with DST">America/New_York</option>
+                <option description="GMT-05:00, America/Nipigon, with DST">America/Nipigon</option>
+                <option description="GMT-09:00, America/Nome, with DST">America/Nome</option>
+                <option description="GMT-02:00, America/Noronha">America/Noronha</option>
+                <option description="GMT-06:00, America/North_Dakota/Beulah, with DST">America/North_Dakota/Beulah</option>
+                <option description="GMT-06:00, America/North_Dakota/Center, with DST">America/North_Dakota/Center</option>
+                <option description="GMT-06:00, America/North_Dakota/New_Salem, with DST">America/North_Dakota/New_Salem</option>
+                <option description="GMT-02:00, America/Nuuk, with DST">America/Nuuk</option>
+                <option description="GMT-06:00, America/Ojinaga, with DST">America/Ojinaga</option>
+                <option description="GMT-05:00, America/Panama">America/Panama</option>
+                <option description="GMT-05:00, America/Pangnirtung, with DST">America/Pangnirtung</option>
+                <option description="GMT-03:00, America/Paramaribo">America/Paramaribo</option>
+                <option description="GMT-07:00, America/Phoenix">America/Phoenix</option>
+                <option description="GMT-05:00, America/Port-au-Prince, with DST">America/Port-au-Prince</option>
+                <option description="GMT-04:00, America/Port_of_Spain">America/Port_of_Spain</option>
+                <option description="GMT-05:00, America/Porto_Acre">America/Porto_Acre</option>
+                <option description="GMT-04:00, America/Porto_Velho">America/Porto_Velho</option>
+                <option description="GMT-04:00, America/Puerto_Rico">America/Puerto_Rico</option>
+                <option description="GMT-03:00, America/Punta_Arenas">America/Punta_Arenas</option>
+                <option description="GMT-06:00, America/Rainy_River, with DST">America/Rainy_River</option>
+                <option description="GMT-06:00, America/Rankin_Inlet, with DST">America/Rankin_Inlet</option>
+                <option description="GMT-03:00, America/Recife">America/Recife</option>
+                <option description="GMT-06:00, America/Regina">America/Regina</option>
+                <option description="GMT-06:00, America/Resolute, with DST">America/Resolute</option>
+                <option description="GMT-05:00, America/Rio_Branco">America/Rio_Branco</option>
+                <option description="GMT-03:00, America/Rosario">America/Rosario</option>
+                <option description="GMT-08:00, America/Santa_Isabel, with DST">America/Santa_Isabel</option>
+                <option description="GMT-03:00, America/Santarem">America/Santarem</option>
+                <option description="GMT-04:00, America/Santiago, with DST">America/Santiago</option>
+                <option description="GMT-04:00, America/Santo_Domingo">America/Santo_Domingo</option>
+                <option description="GMT-03:00, America/Sao_Paulo">America/Sao_Paulo</option>
+                <option description="GMT-01:00, America/Scoresbysund, with DST">America/Scoresbysund</option>
+                <option description="GMT-07:00, America/Shiprock, with DST">America/Shiprock</option>
+                <option description="GMT-09:00, America/Sitka, with DST">America/Sitka</option>
+                <option description="GMT-04:00, America/St_Barthelemy">America/St_Barthelemy</option>
+                <option description="GMT-03:30, America/St_Johns, with DST">America/St_Johns</option>
+                <option description="GMT-04:00, America/St_Kitts">America/St_Kitts</option>
+                <option description="GMT-04:00, America/St_Lucia">America/St_Lucia</option>
+                <option description="GMT-04:00, America/St_Thomas">America/St_Thomas</option>
+                <option description="GMT-04:00, America/St_Vincent">America/St_Vincent</option>
+                <option description="GMT-06:00, America/Swift_Current">America/Swift_Current</option>
+                <option description="GMT-06:00, America/Tegucigalpa">America/Tegucigalpa</option>
+                <option description="GMT-04:00, America/Thule, with DST">America/Thule</option>
+                <option description="GMT-05:00, America/Thunder_Bay, with DST">America/Thunder_Bay</option>
+                <option description="GMT-08:00, America/Tijuana, with DST">America/Tijuana</option>
+                <option description="GMT-05:00, America/Toronto, with DST">America/Toronto</option>
+                <option description="GMT-04:00, America/Tortola">America/Tortola</option>
+                <option description="GMT-08:00, America/Vancouver, with DST">America/Vancouver</option>
+                <option description="GMT-04:00, America/Virgin">America/Virgin</option>
+                <option description="GMT-07:00, America/Whitehorse">America/Whitehorse</option>
+                <option description="GMT-06:00, America/Winnipeg, with DST">America/Winnipeg</option>
+                <option description="GMT-09:00, America/Yakutat, with DST">America/Yakutat</option>
+                <option description="GMT-07:00, America/Yellowknife, with DST">America/Yellowknife</option>
+                <option description="GMT+11:00, Antarctica/Casey">Antarctica/Casey</option>
+                <option description="GMT+07:00, Antarctica/Davis">Antarctica/Davis</option>
+                <option description="GMT+10:00, Antarctica/DumontDUrville">Antarctica/DumontDUrville</option>
+                <option description="GMT+10:00, Antarctica/Macquarie, with DST">Antarctica/Macquarie</option>
+                <option description="GMT+05:00, Antarctica/Mawson">Antarctica/Mawson</option>
+                <option description="GMT+12:00, Antarctica/McMurdo, with DST">Antarctica/McMurdo</option>
+                <option description="GMT-03:00, Antarctica/Palmer">Antarctica/Palmer</option>
+                <option description="GMT-03:00, Antarctica/Rothera">Antarctica/Rothera</option>
+                <option description="GMT+12:00, Antarctica/South_Pole, with DST">Antarctica/South_Pole</option>
+                <option description="GMT+03:00, Antarctica/Syowa">Antarctica/Syowa</option>
+                <option description="GMT+00:00, Antarctica/Troll, with DST">Antarctica/Troll</option>
+                <option description="GMT+06:00, Antarctica/Vostok">Antarctica/Vostok</option>
+                <option description="GMT+01:00, Arctic/Longyearbyen, with DST">Arctic/Longyearbyen</option>
+                <option description="GMT+03:00, Asia/Aden">Asia/Aden</option>
+                <option description="GMT+06:00, Asia/Almaty">Asia/Almaty</option>
+                <option description="GMT+03:00, Asia/Amman">Asia/Amman</option>
+                <option description="GMT+12:00, Asia/Anadyr">Asia/Anadyr</option>
+                <option description="GMT+05:00, Asia/Aqtau">Asia/Aqtau</option>
+                <option description="GMT+05:00, Asia/Aqtobe">Asia/Aqtobe</option>
+                <option description="GMT+05:00, Asia/Ashgabat">Asia/Ashgabat</option>
+                <option description="GMT+05:00, Asia/Ashkhabad">Asia/Ashkhabad</option>
+                <option description="GMT+05:00, Asia/Atyrau">Asia/Atyrau</option>
+                <option description="GMT+03:00, Asia/Baghdad">Asia/Baghdad</option>
+                <option description="GMT+03:00, Asia/Bahrain">Asia/Bahrain</option>
+                <option description="GMT+04:00, Asia/Baku">Asia/Baku</option>
+                <option description="GMT+07:00, Asia/Bangkok">Asia/Bangkok</option>
+                <option description="GMT+07:00, Asia/Barnaul">Asia/Barnaul</option>
+                <option description="GMT+02:00, Asia/Beirut, with DST">Asia/Beirut</option>
+                <option description="GMT+06:00, Asia/Bishkek">Asia/Bishkek</option>
+                <option description="GMT+08:00, Asia/Brunei">Asia/Brunei</option>
+                <option description="GMT+05:30, Asia/Calcutta">Asia/Calcutta</option>
+                <option description="GMT+09:00, Asia/Chita">Asia/Chita</option>
+                <option description="GMT+08:00, Asia/Choibalsan">Asia/Choibalsan</option>
+                <option description="GMT+08:00, Asia/Chongqing">Asia/Chongqing</option>
+                <option description="GMT+08:00, Asia/Chungking">Asia/Chungking</option>
+                <option description="GMT+05:30, Asia/Colombo">Asia/Colombo</option>
+                <option description="GMT+06:00, Asia/Dacca">Asia/Dacca</option>
+                <option description="GMT+03:00, Asia/Damascus">Asia/Damascus</option>
+                <option description="GMT+06:00, Asia/Dhaka">Asia/Dhaka</option>
+                <option description="GMT+09:00, Asia/Dili">Asia/Dili</option>
+                <option description="GMT+04:00, Asia/Dubai">Asia/Dubai</option>
+                <option description="GMT+05:00, Asia/Dushanbe">Asia/Dushanbe</option>
+                <option description="GMT+02:00, Asia/Famagusta, with DST">Asia/Famagusta</option>
+                <option description="GMT+02:00, Asia/Gaza, with DST">Asia/Gaza</option>
+                <option description="GMT+08:00, Asia/Harbin">Asia/Harbin</option>
+                <option description="GMT+02:00, Asia/Hebron, with DST">Asia/Hebron</option>
+                <option description="GMT+07:00, Asia/Ho_Chi_Minh">Asia/Ho_Chi_Minh</option>
+                <option description="GMT+08:00, Asia/Hong_Kong">Asia/Hong_Kong</option>
+                <option description="GMT+07:00, Asia/Hovd">Asia/Hovd</option>
+                <option description="GMT+08:00, Asia/Irkutsk">Asia/Irkutsk</option>
+                <option description="GMT+03:00, Asia/Istanbul">Asia/Istanbul</option>
+                <option description="GMT+07:00, Asia/Jakarta">Asia/Jakarta</option>
+                <option description="GMT+09:00, Asia/Jayapura">Asia/Jayapura</option>
+                <option description="GMT+02:00, Asia/Jerusalem, with DST">Asia/Jerusalem</option>
+                <option description="GMT+04:30, Asia/Kabul">Asia/Kabul</option>
+                <option description="GMT+12:00, Asia/Kamchatka">Asia/Kamchatka</option>
+                <option description="GMT+05:00, Asia/Karachi">Asia/Karachi</option>
+                <option description="GMT+06:00, Asia/Kashgar">Asia/Kashgar</option>
+                <option description="GMT+05:45, Asia/Kathmandu">Asia/Kathmandu</option>
+                <option description="GMT+05:45, Asia/Katmandu">Asia/Katmandu</option>
+                <option description="GMT+09:00, Asia/Khandyga">Asia/Khandyga</option>
+                <option description="GMT+05:30, Asia/Kolkata">Asia/Kolkata</option>
+                <option description="GMT+07:00, Asia/Krasnoyarsk">Asia/Krasnoyarsk</option>
+                <option description="GMT+08:00, Asia/Kuala_Lumpur">Asia/Kuala_Lumpur</option>
+                <option description="GMT+08:00, Asia/Kuching">Asia/Kuching</option>
+                <option description="GMT+03:00, Asia/Kuwait">Asia/Kuwait</option>
+                <option description="GMT+08:00, Asia/Macao">Asia/Macao</option>
+                <option description="GMT+08:00, Asia/Macau">Asia/Macau</option>
+                <option description="GMT+11:00, Asia/Magadan">Asia/Magadan</option>
+                <option description="GMT+08:00, Asia/Makassar">Asia/Makassar</option>
+                <option description="GMT+08:00, Asia/Manila">Asia/Manila</option>
+                <option description="GMT+04:00, Asia/Muscat">Asia/Muscat</option>
+                <option description="GMT+02:00, Asia/Nicosia, with DST">Asia/Nicosia</option>
+                <option description="GMT+07:00, Asia/Novokuznetsk">Asia/Novokuznetsk</option>
+                <option description="GMT+07:00, Asia/Novosibirsk">Asia/Novosibirsk</option>
+                <option description="GMT+06:00, Asia/Omsk">Asia/Omsk</option>
+                <option description="GMT+05:00, Asia/Oral">Asia/Oral</option>
+                <option description="GMT+07:00, Asia/Phnom_Penh">Asia/Phnom_Penh</option>
+                <option description="GMT+07:00, Asia/Pontianak">Asia/Pontianak</option>
+                <option description="GMT+09:00, Asia/Pyongyang">Asia/Pyongyang</option>
+                <option description="GMT+03:00, Asia/Qatar">Asia/Qatar</option>
+                <option description="GMT+06:00, Asia/Qostanay">Asia/Qostanay</option>
+                <option description="GMT+05:00, Asia/Qyzylorda">Asia/Qyzylorda</option>
+                <option description="GMT+06:30, Asia/Rangoon">Asia/Rangoon</option>
+                <option description="GMT+03:00, Asia/Riyadh">Asia/Riyadh</option>
+                <option description="GMT+07:00, Asia/Saigon">Asia/Saigon</option>
+                <option description="GMT+11:00, Asia/Sakhalin">Asia/Sakhalin</option>
+                <option description="GMT+05:00, Asia/Samarkand">Asia/Samarkand</option>
+                <option description="GMT+09:00, Asia/Seoul">Asia/Seoul</option>
+                <option description="GMT+08:00, Asia/Shanghai">Asia/Shanghai</option>
+                <option description="GMT+08:00, Asia/Singapore">Asia/Singapore</option>
+                <option description="GMT+11:00, Asia/Srednekolymsk">Asia/Srednekolymsk</option>
+                <option description="GMT+08:00, Asia/Taipei">Asia/Taipei</option>
+                <option description="GMT+05:00, Asia/Tashkent">Asia/Tashkent</option>
+                <option description="GMT+04:00, Asia/Tbilisi">Asia/Tbilisi</option>
+                <option description="GMT+03:30, Asia/Tehran">Asia/Tehran</option>
+                <option description="GMT+02:00, Asia/Tel_Aviv, with DST">Asia/Tel_Aviv</option>
+                <option description="GMT+06:00, Asia/Thimbu">Asia/Thimbu</option>
+                <option description="GMT+06:00, Asia/Thimphu">Asia/Thimphu</option>
+                <option description="GMT+09:00, Asia/Tokyo">Asia/Tokyo</option>
+                <option description="GMT+07:00, Asia/Tomsk">Asia/Tomsk</option>
+                <option description="GMT+08:00, Asia/Ujung_Pandang">Asia/Ujung_Pandang</option>
+                <option description="GMT+08:00, Asia/Ulaanbaatar">Asia/Ulaanbaatar</option>
+                <option description="GMT+08:00, Asia/Ulan_Bator">Asia/Ulan_Bator</option>
+                <option description="GMT+06:00, Asia/Urumqi">Asia/Urumqi</option>
+                <option description="GMT+10:00, Asia/Ust-Nera">Asia/Ust-Nera</option>
+                <option description="GMT+07:00, Asia/Vientiane">Asia/Vientiane</option>
+                <option description="GMT+10:00, Asia/Vladivostok">Asia/Vladivostok</option>
+                <option description="GMT+09:00, Asia/Yakutsk">Asia/Yakutsk</option>
+                <option description="GMT+06:30, Asia/Yangon">Asia/Yangon</option>
+                <option description="GMT+05:00, Asia/Yekaterinburg">Asia/Yekaterinburg</option>
+                <option description="GMT+04:00, Asia/Yerevan">Asia/Yerevan</option>
+                <option description="GMT-01:00, Atlantic/Azores, with DST">Atlantic/Azores</option>
+                <option description="GMT-04:00, Atlantic/Bermuda, with DST">Atlantic/Bermuda</option>
+                <option description="GMT+00:00, Atlantic/Canary, with DST">Atlantic/Canary</option>
+                <option description="GMT-01:00, Atlantic/Cape_Verde">Atlantic/Cape_Verde</option>
+                <option description="GMT+00:00, Atlantic/Faeroe, with DST">Atlantic/Faeroe</option>
+                <option description="GMT+00:00, Atlantic/Faroe, with DST">Atlantic/Faroe</option>
+                <option description="GMT+01:00, Atlantic/Jan_Mayen, with DST">Atlantic/Jan_Mayen</option>
+                <option description="GMT+00:00, Atlantic/Madeira, with DST">Atlantic/Madeira</option>
+                <option description="GMT+00:00, Atlantic/Reykjavik">Atlantic/Reykjavik</option>
+                <option description="GMT-02:00, Atlantic/South_Georgia">Atlantic/South_Georgia</option>
+                <option description="GMT+00:00, Atlantic/St_Helena">Atlantic/St_Helena</option>
+                <option description="GMT-03:00, Atlantic/Stanley">Atlantic/Stanley</option>
+                <option description="GMT+10:00, Australia/ACT, with DST">Australia/ACT</option>
+                <option description="GMT+09:30, Australia/Adelaide, with DST">Australia/Adelaide</option>
+                <option description="GMT+10:00, Australia/Brisbane">Australia/Brisbane</option>
+                <option description="GMT+09:30, Australia/Broken_Hill, with DST">Australia/Broken_Hill</option>
+                <option description="GMT+10:00, Australia/Canberra, with DST">Australia/Canberra</option>
+                <option description="GMT+10:00, Australia/Currie, with DST">Australia/Currie</option>
+                <option description="GMT+09:30, Australia/Darwin">Australia/Darwin</option>
+                <option description="GMT+08:45, Australia/Eucla">Australia/Eucla</option>
+                <option description="GMT+10:00, Australia/Hobart, with DST">Australia/Hobart</option>
+                <option description="GMT+10:30, Australia/LHI, with DST">Australia/LHI</option>
+                <option description="GMT+10:00, Australia/Lindeman">Australia/Lindeman</option>
+                <option description="GMT+10:30, Australia/Lord_Howe, with DST">Australia/Lord_Howe</option>
+                <option description="GMT+10:00, Australia/Melbourne, with DST">Australia/Melbourne</option>
+                <option description="GMT+10:00, Australia/NSW, with DST">Australia/NSW</option>
+                <option description="GMT+09:30, Australia/North">Australia/North</option>
+                <option description="GMT+08:00, Australia/Perth">Australia/Perth</option>
+                <option description="GMT+10:00, Australia/Queensland">Australia/Queensland</option>
+                <option description="GMT+09:30, Australia/South, with DST">Australia/South</option>
+                <option description="GMT+10:00, Australia/Sydney, with DST">Australia/Sydney</option>
+                <option description="GMT+10:00, Australia/Tasmania, with DST">Australia/Tasmania</option>
+                <option description="GMT+10:00, Australia/Victoria, with DST">Australia/Victoria</option>
+                <option description="GMT+08:00, Australia/West">Australia/West</option>
+                <option description="GMT+09:30, Australia/Yancowinna, with DST">Australia/Yancowinna</option>
+                <option description="GMT-05:00, Brazil/Acre">Brazil/Acre</option>
+                <option description="GMT-02:00, Brazil/DeNoronha">Brazil/DeNoronha</option>
+                <option description="GMT-03:00, Brazil/East">Brazil/East</option>
+                <option description="GMT-04:00, Brazil/West">Brazil/West</option>
+                <option description="GMT+01:00, CET, with DST">CET</option>
+                <option description="GMT-06:00, CST6CDT, with DST">CST6CDT</option>
+                <option description="GMT-04:00, Canada/Atlantic, with DST">Canada/Atlantic</option>
+                <option description="GMT-06:00, Canada/Central, with DST">Canada/Central</option>
+                <option description="GMT-05:00, Canada/Eastern, with DST">Canada/Eastern</option>
+                <option description="GMT-07:00, Canada/Mountain, with DST">Canada/Mountain</option>
+                <option description="GMT-03:30, Canada/Newfoundland, with DST">Canada/Newfoundland</option>
+                <option description="GMT-08:00, Canada/Pacific, with DST">Canada/Pacific</option>
+                <option description="GMT-06:00, Canada/Saskatchewan">Canada/Saskatchewan</option>
+                <option description="GMT-07:00, Canada/Yukon">Canada/Yukon</option>
+                <option description="GMT-04:00, Chile/Continental, with DST">Chile/Continental</option>
+                <option description="GMT-06:00, Chile/EasterIsland, with DST">Chile/EasterIsland</option>
+                <option description="GMT-05:00, Cuba, with DST">Cuba</option>
+                <option description="GMT+02:00, EET, with DST">EET</option>
+                <option description="GMT-05:00, EST5EDT, with DST">EST5EDT</option>
+                <option description="GMT+02:00, Egypt, with DST">Egypt</option>
+                <option description="GMT+00:00, Eire, with DST">Eire</option>
+                <option description="GMT+00:00, Etc/GMT">Etc/GMT</option>
+                <option description="GMT+00:00, Etc/GMT+0">Etc/GMT+0</option>
+                <option description="GMT-01:00, Etc/GMT+1">Etc/GMT+1</option>
+                <option description="GMT-10:00, Etc/GMT+10">Etc/GMT+10</option>
+                <option description="GMT-11:00, Etc/GMT+11">Etc/GMT+11</option>
+                <option description="GMT-12:00, Etc/GMT+12">Etc/GMT+12</option>
+                <option description="GMT-02:00, Etc/GMT+2">Etc/GMT+2</option>
+                <option description="GMT-03:00, Etc/GMT+3">Etc/GMT+3</option>
+                <option description="GMT-04:00, Etc/GMT+4">Etc/GMT+4</option>
+                <option description="GMT-05:00, Etc/GMT+5">Etc/GMT+5</option>
+                <option description="GMT-06:00, Etc/GMT+6">Etc/GMT+6</option>
+                <option description="GMT-07:00, Etc/GMT+7">Etc/GMT+7</option>
+                <option description="GMT-08:00, Etc/GMT+8">Etc/GMT+8</option>
+                <option description="GMT-09:00, Etc/GMT+9">Etc/GMT+9</option>
+                <option description="GMT+00:00, Etc/GMT-0">Etc/GMT-0</option>
+                <option description="GMT+01:00, Etc/GMT-1">Etc/GMT-1</option>
+                <option description="GMT+10:00, Etc/GMT-10">Etc/GMT-10</option>
+                <option description="GMT+11:00, Etc/GMT-11">Etc/GMT-11</option>
+                <option description="GMT+12:00, Etc/GMT-12">Etc/GMT-12</option>
+                <option description="GMT+13:00, Etc/GMT-13">Etc/GMT-13</option>
+                <option description="GMT+14:00, Etc/GMT-14">Etc/GMT-14</option>
+                <option description="GMT+02:00, Etc/GMT-2">Etc/GMT-2</option>
+                <option description="GMT+03:00, Etc/GMT-3">Etc/GMT-3</option>
+                <option description="GMT+04:00, Etc/GMT-4">Etc/GMT-4</option>
+                <option description="GMT+05:00, Etc/GMT-5">Etc/GMT-5</option>
+                <option description="GMT+06:00, Etc/GMT-6">Etc/GMT-6</option>
+                <option description="GMT+07:00, Etc/GMT-7">Etc/GMT-7</option>
+                <option description="GMT+08:00, Etc/GMT-8">Etc/GMT-8</option>
+                <option description="GMT+09:00, Etc/GMT-9">Etc/GMT-9</option>
+                <option description="GMT+00:00, Etc/GMT0">Etc/GMT0</option>
+                <option description="GMT+00:00, Etc/Greenwich">Etc/Greenwich</option>
+                <option description="GMT+00:00, Etc/UCT">Etc/UCT</option>
+                <option description="GMT+00:00, Etc/UTC">Etc/UTC</option>
+                <option description="GMT+00:00, Etc/Universal">Etc/Universal</option>
+                <option description="GMT+00:00, Etc/Zulu">Etc/Zulu</option>
+                <option description="GMT+01:00, Europe/Amsterdam, with DST">Europe/Amsterdam</option>
+                <option description="GMT+01:00, Europe/Andorra, with DST">Europe/Andorra</option>
+                <option description="GMT+04:00, Europe/Astrakhan">Europe/Astrakhan</option>
+                <option description="GMT+02:00, Europe/Athens, with DST">Europe/Athens</option>
+                <option description="GMT+00:00, Europe/Belfast, with DST">Europe/Belfast</option>
+                <option description="GMT+01:00, Europe/Belgrade, with DST">Europe/Belgrade</option>
+                <option description="GMT+01:00, Europe/Berlin, with DST">Europe/Berlin</option>
+                <option description="GMT+01:00, Europe/Bratislava, with DST">Europe/Bratislava</option>
+                <option description="GMT+01:00, Europe/Brussels, with DST">Europe/Brussels</option>
+                <option description="GMT+02:00, Europe/Bucharest, with DST">Europe/Bucharest</option>
+                <option description="GMT+01:00, Europe/Budapest, with DST">Europe/Budapest</option>
+                <option description="GMT+01:00, Europe/Busingen, with DST">Europe/Busingen</option>
+                <option description="GMT+02:00, Europe/Chisinau, with DST">Europe/Chisinau</option>
+                <option description="GMT+01:00, Europe/Copenhagen, with DST">Europe/Copenhagen</option>
+                <option description="GMT+00:00, Europe/Dublin, with DST">Europe/Dublin</option>
+                <option description="GMT+01:00, Europe/Gibraltar, with DST">Europe/Gibraltar</option>
+                <option description="GMT+00:00, Europe/Guernsey, with DST">Europe/Guernsey</option>
+                <option description="GMT+02:00, Europe/Helsinki, with DST">Europe/Helsinki</option>
+                <option description="GMT+00:00, Europe/Isle_of_Man, with DST">Europe/Isle_of_Man</option>
+                <option description="GMT+03:00, Europe/Istanbul">Europe/Istanbul</option>
+                <option description="GMT+00:00, Europe/Jersey, with DST">Europe/Jersey</option>
+                <option description="GMT+02:00, Europe/Kaliningrad">Europe/Kaliningrad</option>
+                <option description="GMT+02:00, Europe/Kiev, with DST">Europe/Kiev</option>
+                <option description="GMT+03:00, Europe/Kirov">Europe/Kirov</option>
+                <option description="GMT+02:00, Europe/Kyiv, with DST">Europe/Kyiv</option>
+                <option description="GMT+00:00, Europe/Lisbon, with DST">Europe/Lisbon</option>
+                <option description="GMT+01:00, Europe/Ljubljana, with DST">Europe/Ljubljana</option>
+                <option description="GMT+00:00, Europe/London, with DST">Europe/London</option>
+                <option description="GMT+01:00, Europe/Luxembourg, with DST">Europe/Luxembourg</option>
+                <option description="GMT+01:00, Europe/Madrid, with DST">Europe/Madrid</option>
+                <option description="GMT+01:00, Europe/Malta, with DST">Europe/Malta</option>
+                <option description="GMT+02:00, Europe/Mariehamn, with DST">Europe/Mariehamn</option>
+                <option description="GMT+03:00, Europe/Minsk">Europe/Minsk</option>
+                <option description="GMT+01:00, Europe/Monaco, with DST">Europe/Monaco</option>
+                <option description="GMT+03:00, Europe/Moscow">Europe/Moscow</option>
+                <option description="GMT+02:00, Europe/Nicosia, with DST">Europe/Nicosia</option>
+                <option description="GMT+01:00, Europe/Oslo, with DST">Europe/Oslo</option>
+                <option description="GMT+01:00, Europe/Paris, with DST">Europe/Paris</option>
+                <option description="GMT+01:00, Europe/Podgorica, with DST">Europe/Podgorica</option>
+                <option description="GMT+01:00, Europe/Prague, with DST">Europe/Prague</option>
+                <option description="GMT+02:00, Europe/Riga, with DST">Europe/Riga</option>
+                <option description="GMT+01:00, Europe/Rome, with DST">Europe/Rome</option>
+                <option description="GMT+04:00, Europe/Samara">Europe/Samara</option>
+                <option description="GMT+01:00, Europe/San_Marino, with DST">Europe/San_Marino</option>
+                <option description="GMT+01:00, Europe/Sarajevo, with DST">Europe/Sarajevo</option>
+                <option description="GMT+04:00, Europe/Saratov">Europe/Saratov</option>
+                <option description="GMT+03:00, Europe/Simferopol">Europe/Simferopol</option>
+                <option description="GMT+01:00, Europe/Skopje, with DST">Europe/Skopje</option>
+                <option description="GMT+02:00, Europe/Sofia, with DST">Europe/Sofia</option>
+                <option description="GMT+01:00, Europe/Stockholm, with DST">Europe/Stockholm</option>
+                <option description="GMT+02:00, Europe/Tallinn, with DST">Europe/Tallinn</option>
+                <option description="GMT+01:00, Europe/Tirane, with DST">Europe/Tirane</option>
+                <option description="GMT+02:00, Europe/Tiraspol, with DST">Europe/Tiraspol</option>
+                <option description="GMT+04:00, Europe/Ulyanovsk">Europe/Ulyanovsk</option>
+                <option description="GMT+02:00, Europe/Uzhgorod, with DST">Europe/Uzhgorod</option>
+                <option description="GMT+01:00, Europe/Vaduz, with DST">Europe/Vaduz</option>
+                <option description="GMT+01:00, Europe/Vatican, with DST">Europe/Vatican</option>
+                <option description="GMT+01:00, Europe/Vienna, with DST">Europe/Vienna</option>
+                <option description="GMT+02:00, Europe/Vilnius, with DST">Europe/Vilnius</option>
+                <option description="GMT+03:00, Europe/Volgograd">Europe/Volgograd</option>
+                <option description="GMT+01:00, Europe/Warsaw, with DST">Europe/Warsaw</option>
+                <option description="GMT+01:00, Europe/Zagreb, with DST">Europe/Zagreb</option>
+                <option description="GMT+02:00, Europe/Zaporozhye, with DST">Europe/Zaporozhye</option>
+                <option description="GMT+01:00, Europe/Zurich, with DST">Europe/Zurich</option>
+                <option description="GMT+00:00, GB, with DST">GB</option>
+                <option description="GMT+00:00, GB-Eire, with DST">GB-Eire</option>
+                <option description="GMT+00:00, GMT">GMT</option>
+                <option description="GMT+00:00, GMT0">GMT0</option>
+                <option description="GMT+00:00, Greenwich">Greenwich</option>
+                <option description="GMT+08:00, Hongkong">Hongkong</option>
+                <option description="GMT+00:00, Iceland">Iceland</option>
+                <option description="GMT+03:00, Indian/Antananarivo">Indian/Antananarivo</option>
+                <option description="GMT+06:00, Indian/Chagos">Indian/Chagos</option>
+                <option description="GMT+07:00, Indian/Christmas">Indian/Christmas</option>
+                <option description="GMT+06:30, Indian/Cocos">Indian/Cocos</option>
+                <option description="GMT+03:00, Indian/Comoro">Indian/Comoro</option>
+                <option description="GMT+05:00, Indian/Kerguelen">Indian/Kerguelen</option>
+                <option description="GMT+04:00, Indian/Mahe">Indian/Mahe</option>
+                <option description="GMT+05:00, Indian/Maldives">Indian/Maldives</option>
+                <option description="GMT+04:00, Indian/Mauritius">Indian/Mauritius</option>
+                <option description="GMT+03:00, Indian/Mayotte">Indian/Mayotte</option>
+                <option description="GMT+04:00, Indian/Reunion">Indian/Reunion</option>
+                <option description="GMT+03:30, Iran">Iran</option>
+                <option description="GMT+02:00, Israel, with DST">Israel</option>
+                <option description="GMT-05:00, Jamaica">Jamaica</option>
+                <option description="GMT+09:00, Japan">Japan</option>
+                <option description="GMT+12:00, Kwajalein">Kwajalein</option>
+                <option description="GMT+02:00, Libya">Libya</option>
+                <option description="GMT+01:00, MET, with DST">MET</option>
+                <option description="GMT-07:00, MST7MDT, with DST">MST7MDT</option>
+                <option description="GMT-08:00, Mexico/BajaNorte, with DST">Mexico/BajaNorte</option>
+                <option description="GMT-07:00, Mexico/BajaSur">Mexico/BajaSur</option>
+                <option description="GMT-06:00, Mexico/General">Mexico/General</option>
+                <option description="GMT+12:00, NZ, with DST">NZ</option>
+                <option description="GMT+12:45, NZ-CHAT, with DST">NZ-CHAT</option>
+                <option description="GMT-07:00, Navajo, with DST">Navajo</option>
+                <option description="GMT+08:00, PRC">PRC</option>
+                <option description="GMT-08:00, PST8PDT, with DST">PST8PDT</option>
+                <option description="GMT+13:00, Pacific/Apia">Pacific/Apia</option>
+                <option description="GMT+12:00, Pacific/Auckland, with DST">Pacific/Auckland</option>
+                <option description="GMT+11:00, Pacific/Bougainville">Pacific/Bougainville</option>
+                <option description="GMT+12:45, Pacific/Chatham, with DST">Pacific/Chatham</option>
+                <option description="GMT+10:00, Pacific/Chuuk">Pacific/Chuuk</option>
+                <option description="GMT-06:00, Pacific/Easter, with DST">Pacific/Easter</option>
+                <option description="GMT+11:00, Pacific/Efate">Pacific/Efate</option>
+                <option description="GMT+13:00, Pacific/Enderbury">Pacific/Enderbury</option>
+                <option description="GMT+13:00, Pacific/Fakaofo">Pacific/Fakaofo</option>
+                <option description="GMT+12:00, Pacific/Fiji">Pacific/Fiji</option>
+                <option description="GMT+12:00, Pacific/Funafuti">Pacific/Funafuti</option>
+                <option description="GMT-06:00, Pacific/Galapagos">Pacific/Galapagos</option>
+                <option description="GMT-09:00, Pacific/Gambier">Pacific/Gambier</option>
+                <option description="GMT+11:00, Pacific/Guadalcanal">Pacific/Guadalcanal</option>
+                <option description="GMT+10:00, Pacific/Guam">Pacific/Guam</option>
+                <option description="GMT-10:00, Pacific/Honolulu">Pacific/Honolulu</option>
+                <option description="GMT-10:00, Pacific/Johnston">Pacific/Johnston</option>
+                <option description="GMT+13:00, Pacific/Kanton">Pacific/Kanton</option>
+                <option description="GMT+14:00, Pacific/Kiritimati">Pacific/Kiritimati</option>
+                <option description="GMT+11:00, Pacific/Kosrae">Pacific/Kosrae</option>
+                <option description="GMT+12:00, Pacific/Kwajalein">Pacific/Kwajalein</option>
+                <option description="GMT+12:00, Pacific/Majuro">Pacific/Majuro</option>
+                <option description="GMT-09:30, Pacific/Marquesas">Pacific/Marquesas</option>
+                <option description="GMT-11:00, Pacific/Midway">Pacific/Midway</option>
+                <option description="GMT+12:00, Pacific/Nauru">Pacific/Nauru</option>
+                <option description="GMT-11:00, Pacific/Niue">Pacific/Niue</option>
+                <option description="GMT+11:00, Pacific/Norfolk, with DST">Pacific/Norfolk</option>
+                <option description="GMT+11:00, Pacific/Noumea">Pacific/Noumea</option>
+                <option description="GMT-11:00, Pacific/Pago_Pago">Pacific/Pago_Pago</option>
+                <option description="GMT+09:00, Pacific/Palau">Pacific/Palau</option>
+                <option description="GMT-08:00, Pacific/Pitcairn">Pacific/Pitcairn</option>
+                <option description="GMT+11:00, Pacific/Pohnpei">Pacific/Pohnpei</option>
+                <option description="GMT+11:00, Pacific/Ponape">Pacific/Ponape</option>
+                <option description="GMT+10:00, Pacific/Port_Moresby">Pacific/Port_Moresby</option>
+                <option description="GMT-10:00, Pacific/Rarotonga">Pacific/Rarotonga</option>
+                <option description="GMT+10:00, Pacific/Saipan">Pacific/Saipan</option>
+                <option description="GMT-11:00, Pacific/Samoa">Pacific/Samoa</option>
+                <option description="GMT-10:00, Pacific/Tahiti">Pacific/Tahiti</option>
+                <option description="GMT+12:00, Pacific/Tarawa">Pacific/Tarawa</option>
+                <option description="GMT+13:00, Pacific/Tongatapu">Pacific/Tongatapu</option>
+                <option description="GMT+10:00, Pacific/Truk">Pacific/Truk</option>
+                <option description="GMT+12:00, Pacific/Wake">Pacific/Wake</option>
+                <option description="GMT+12:00, Pacific/Wallis">Pacific/Wallis</option>
+                <option description="GMT+10:00, Pacific/Yap">Pacific/Yap</option>
+                <option description="GMT+01:00, Poland, with DST">Poland</option>
+                <option description="GMT+00:00, Portugal, with DST">Portugal</option>
+                <option description="GMT+09:00, ROK">ROK</option>
+                <option description="GMT+08:00, Singapore">Singapore</option>
+                <option description="GMT-04:00, SystemV/AST4">SystemV/AST4</option>
+                <option description="GMT-04:00, SystemV/AST4ADT, with DST">SystemV/AST4ADT</option>
+                <option description="GMT-06:00, SystemV/CST6">SystemV/CST6</option>
+                <option description="GMT-06:00, SystemV/CST6CDT, with DST">SystemV/CST6CDT</option>
+                <option description="GMT-05:00, SystemV/EST5">SystemV/EST5</option>
+                <option description="GMT-05:00, SystemV/EST5EDT, with DST">SystemV/EST5EDT</option>
+                <option description="GMT-10:00, SystemV/HST10">SystemV/HST10</option>
+                <option description="GMT-07:00, SystemV/MST7">SystemV/MST7</option>
+                <option description="GMT-07:00, SystemV/MST7MDT, with DST">SystemV/MST7MDT</option>
+                <option description="GMT-08:00, SystemV/PST8">SystemV/PST8</option>
+                <option description="GMT-08:00, SystemV/PST8PDT, with DST">SystemV/PST8PDT</option>
+                <option description="GMT-09:00, SystemV/YST9">SystemV/YST9</option>
+                <option description="GMT-09:00, SystemV/YST9YDT, with DST">SystemV/YST9YDT</option>
+                <option description="GMT+03:00, Turkey">Turkey</option>
+                <option description="GMT+00:00, UCT">UCT</option>
+                <option description="GMT-09:00, US/Alaska, with DST">US/Alaska</option>
+                <option description="GMT-10:00, US/Aleutian, with DST">US/Aleutian</option>
+                <option description="GMT-07:00, US/Arizona">US/Arizona</option>
+                <option description="GMT-06:00, US/Central, with DST">US/Central</option>
+                <option description="GMT-05:00, US/East-Indiana, with DST">US/East-Indiana</option>
+                <option description="GMT-05:00, US/Eastern, with DST">US/Eastern</option>
+                <option description="GMT-10:00, US/Hawaii">US/Hawaii</option>
+                <option description="GMT-06:00, US/Indiana-Starke, with DST">US/Indiana-Starke</option>
+                <option description="GMT-05:00, US/Michigan, with DST">US/Michigan</option>
+                <option description="GMT-07:00, US/Mountain, with DST">US/Mountain</option>
+                <option description="GMT-08:00, US/Pacific, with DST">US/Pacific</option>
+                <option description="GMT-11:00, US/Samoa">US/Samoa</option>
+                <option description="GMT+00:00, UTC">UTC</option>
+                <option description="GMT+00:00, Universal">Universal</option>
+                <option description="GMT+03:00, W-SU">W-SU</option>
+                <option description="GMT+00:00, WET, with DST">WET</option>
+                <option description="GMT+00:00, Zulu">Zulu</option>
+                <option description="GMT-05:00, EST">EST</option>
+                <option description="GMT-10:00, HST">HST</option>
+                <option description="GMT-07:00, MST">MST</option>
+                <option description="GMT+09:30, ACT">ACT</option>
+                <option description="GMT+10:00, AET, with DST">AET</option>
+                <option description="GMT-03:00, AGT">AGT</option>
+                <option description="GMT+02:00, ART, with DST">ART</option>
+                <option description="GMT-09:00, AST, with DST">AST</option>
+                <option description="GMT-03:00, BET">BET</option>
+                <option description="GMT+06:00, BST">BST</option>
+                <option description="GMT+02:00, CAT">CAT</option>
+                <option description="GMT-03:30, CNT, with DST">CNT</option>
+                <option description="GMT-06:00, CST, with DST">CST</option>
+                <option description="GMT+08:00, CTT">CTT</option>
+                <option description="GMT+03:00, EAT">EAT</option>
+                <option description="GMT+01:00, ECT, with DST">ECT</option>
+                <option description="GMT-05:00, IET, with DST">IET</option>
+                <option description="GMT+05:30, IST">IST</option>
+                <option description="GMT+09:00, JST">JST</option>
+                <option description="GMT+13:00, MIT">MIT</option>
+                <option description="GMT+04:00, NET">NET</option>
+                <option description="GMT+12:00, NST, with DST">NST</option>
+                <option description="GMT+05:00, PLT">PLT</option>
+                <option description="GMT-07:00, PNT">PNT</option>
+                <option description="GMT-04:00, PRT">PRT</option>
+                <option description="GMT-08:00, PST, with DST">PST</option>
+                <option description="GMT+11:00, SST">SST</option>
+                <option description="GMT+07:00, VST">VST</option>
+                <option description="GMT-12:00">GMT-12:00</option>
+                <option description="GMT-11:00">GMT-11:00</option>
+                <option description="GMT-10:00">GMT-10:00</option>
+                <option description="GMT-09:00">GMT-09:00</option>
+                <option description="GMT-08:00">GMT-08:00</option>
+                <option description="GMT-07:00">GMT-07:00</option>
+                <option description="GMT-06:00">GMT-06:00</option>
+                <option description="GMT-05:00">GMT-05:00</option>
+                <option description="GMT-04:00">GMT-04:00</option>
+                <option description="GMT-03:00">GMT-03:00</option>
+                <option description="GMT-02:00">GMT-02:00</option>
+                <option description="GMT-01:00">GMT-01:00</option>
+                <option description="GMT+00:00">GMT+00:00</option>
+                <option description="GMT+01:00">GMT+01:00</option>
+                <option description="GMT+02:00">GMT+02:00</option>
+                <option description="GMT+03:00">GMT+03:00</option>
+                <option description="GMT+04:00">GMT+04:00</option>
+                <option description="GMT+05:00">GMT+05:00</option>
+                <option description="GMT+06:00">GMT+06:00</option>
+                <option description="GMT+07:00">GMT+07:00</option>
+                <option description="GMT+08:00">GMT+08:00</option>
+                <option description="GMT+09:00">GMT+09:00</option>
+                <option description="GMT+10:00">GMT+10:00</option>
+                <option description="GMT+11:00">GMT+11:00</option>
+                <option description="GMT+12:00">GMT+12:00</option>
+                <option description="GMT+13:00">GMT+13:00</option>
+                <option description="GMT+14:00">GMT+14:00</option>
+              </selectionValues>
+              <help>Временная зона, в которой находится устройство. Используется драйвером устройства для преобразования времени, например во время синхронизации внутренних часов устройства с сервером.</help>
+              <group>Местонахождение</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Режим чтения метаданных" name="metadata" type="I">
+              <selectionValues>
+                <option description="Не считывать">0</option>
+                <option description="Считывать определения настроек, операций и событий">1</option>
+                <option description="Считывать все">2</option>
+              </selectionValues>
+              <help>Режим чтения метаданных определяет, производится ли перечитывание переменных, функций, событий и активов устройства в каждый цикл синхронизации.</help>
+              <group>Метаданные</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Активные переменные/функции/события" name="activeEntities" type="I">
+              <selectionValues>
+                <option description="Все">0</option>
+                <option description="Только выбранные">1</option>
+              </selectionValues>
+              <help>Сущности (переменные, функции и события) устройства, которые драйвер будет пытаться сделать доступными: либо все сущности, либо только выбранные в настройках аккаунта устройства.</help>
+              <group>Метаданные</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Режим кэширования настроек" name="cache" type="I">
+              <selectionValues>
+                <option description="База данных (постоянный кэш)">0</option>
+                <option description="Память (временный кэш)">1</option>
+              </selectionValues>
+              <help>Определяет режим кэширования настроек устройства.</help>
+              <group>Метаданные</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field advanced="true" description="Качество настроек по умолчанию" name="settingsDefaultQuality" type="I">
+              <group>Метаданные</group>
+              <defaultValue>192</defaultValue>
+            </field>
+            <field description="Время хранения событий устройства" editor="period" name="eventStoragePeriod" nullable="true" type="L">
+              <editorOptions>3 8</editorOptions>
+              <help>Определяет, как долго события устройства будут по умолчанию храниться в базе данных сервера. Нулевое значение отключает хранение событий. Индивидуальные настройки хранения для каждого типа событий можно задать в глобальных Правилах обработки событий.</help>
+              <group>Период хранения событий</group>
+              <defaultValue>604800000</defaultValue>
+            </field>
+            <field advanced="true" description="Выражение зависимости" editor="expression" name="dependency" nullable="true" type="S">
+              <help>Это выражение вычисляется перед каждой синхронизацией. Если результат равен FALSE, синхронизация не производится.</help>
+              <group>Синхронизация</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Выражение статуса" editor="expression" name="status" nullable="true" type="S">
+              <help>Это выражение вычисляется после каждой синхронизации. Оно должно возвращать текстовое описание текущего статуса устройства.</help>
+              <group>Синхронизация</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Выражение цвета" editor="expression" name="color" nullable="true" type="S">
+              <help>Это выражение вычисляется после каждой синхронизации. Оно должно возвращать цвет, соответствующий текущему состоянию устройства.</help>
+              <group>Синхронизация</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Выражение широты" editor="expression" name="latitude" nullable="true" type="S">
+              <help>Это выражение вычисляется после каждой синхронизации. Оно должно возвращать географическую широту устройства в формате числа с плавающей запятой.</help>
+              <group>Местонахождение</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Выражение долготы" editor="expression" name="longitude" nullable="true" type="S">
+              <help>Это выражение вычисляется после каждой синхронизации. Оно должно возвращать географическую долготу устройства в формате числа с плавающей запятой.</help>
+              <group>Местонахождение</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Время хранения истории местонахождения" editor="period" name="locationStoragePeriod" nullable="true" type="L">
+              <editorOptions>3 8</editorOptions>
+              <help>Сервер будет автоматически удалять данные о местоположении устройства по истечении указанного периода.</help>
+              <group>Местонахождение</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Активировать тревогу при отсутствии соединения" name="offlineAlert" type="B">
+              <help>Этот флаг определяет, будет ли активирована тревога &apos;Устройство отключено&apos; если соединение с устройством отсутствует в течение некоторого времени.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field advanced="true" description="Максимальное число записей в журнале последних синхронизаций" name="maxSyncLogEntries" type="I">
+              <help>Задаёт максимальное число записей о последних синхронизациях, отображаемых в информации об устройстве</help>
+              <defaultValue>10</defaultValue>
+            </field>
+            <field advanced="true" description="Виртуальная сеть устройств" extendableSelectionValues="true" name="virtualNetwork" type="S">
+              <selectionValues>
+                <option description="Отсутствует"/>
+              </selectionValues>
+              <help>Данная настройка позволяет задать к какой виртуальной сети устройств принадлежит текущее устройство.</help>
+              <defaultValue/>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>dependency#options</reference>
+              <expression>expressionEditorOptions({.:})</expression>
+            </binding>
+            <binding>
+              <reference>status#options</reference>
+              <expression>expressionEditorOptions({.:})</expression>
+            </binding>
+            <binding>
+              <reference>color#options</reference>
+              <expression>expressionEditorOptions({.:})</expression>
+            </binding>
+            <binding>
+              <reference>latitude#options</reference>
+              <expression>expressionEditorOptions({.:})</expression>
+            </binding>
+            <binding>
+              <reference>longitude#options</reference>
+              <expression>expressionEditorOptions({.:})</expression>
+            </binding>
+            <binding>
+              <reference>managedVariables$#enabled</reference>
+              <expression>{activeEntities} == 1</expression>
+            </binding>
+            <binding>
+              <reference>managedFunctions$#enabled</reference>
+              <expression>{activeEntities} == 1</expression>
+            </binding>
+            <binding>
+              <reference>managedEvents$#enabled</reference>
+              <expression>{activeEntities} == 1</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="name">portal</value>
+            <value name="syncPeriod">600000</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>granulator</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Имя" keyfield="true" name="name" nullable="true" type="S">
+              <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HRxSHlx3K15e0JjQvNGPINC80L7QttC10YIg0YHQvtC00LXRgNC20LDRgtGMINGC0L7Qu9GM0LrQviDQu9Cw0YLQuNC90YHQutC40LUg0LHRg9C60LLRiywg0YbQuNGE0YDRiyDQuCDRgdC40LzQstC+0LvRiyDQv9C+0LTRh9C10YDQutC40LLQsNC90LjRjx0=</validators>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Переменная" extendableSelectionValues="true" icon="fi_variable" name="variable" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Активный" name="enabled" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Формат гранул" name="granuleValueFormat" type="T">
+              <defaultValue>
+                <table>
+                  <format maxRecords="1" minRecords="1">
+                    <fields>
+                      <field description="Минимальное количество записей" name="minRecords" type="I">
+                        <validators contentType="base64">HEweMCAyMTQ3NDgzNjQ3HQ==</validators>
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Максимальное количество записей" extendableSelectionValues="true" name="maxRecords" type="I">
+                        <validators contentType="base64">HEweMCAyMTQ3NDgzNjQ3HQ==</validators>
+                        <selectionValues>
+                          <option description="Не ограничено">2147483647</option>
+                        </selectionValues>
+                        <defaultValue>2147483647</defaultValue>
+                      </field>
+                      <field description="Поля" name="fields" type="T">
+                        <defaultValue>
+                          <table>
+                            <format maxRecords="2147483647" reorderable="true">
+                              <fields>
+                                <field hidden="true" name="oldname" type="S">
+                                  <defaultValue/>
+                                </field>
+                                <field description="Имя" keyfield="true" name="name" type="S">
+                                  <validators contentType="base64">HFIeXHcrXl7QmNC80Y8g0LzQvtC20LXRgiDRgdC+0LTQtdGA0LbQsNGC0Ywg0YLQvtC70YzQutC+INC70LDRgtC40L3RgdC60LjQtSDQsdGD0LrQstGLLCDRhtC40YTRgNGLINC4INGB0LjQvNCy0L7Qu9GLINC/0L7QtNGH0LXRgNC60LjQstCw0L3QuNGPHQ==</validators>
+                                  <defaultValue/>
+                                </field>
+                                <field description="Тип" name="type" type="S">
+                                  <selectionValues>
+                                    <option description="Целочисленный">I</option>
+                                    <option description="Строковый">S</option>
+                                    <option description="Булевский">B</option>
+                                    <option description="Длинный целочисленный">L</option>
+                                    <option description="С плавающей запятой">F</option>
+                                    <option description="С плавающей запятой (64-бит)">E</option>
+                                    <option description="Дата">D</option>
+                                    <option description="Табличный">T</option>
+                                    <option description="Цвет">C</option>
+                                    <option description="Бинарный блок">A</option>
+                                  </selectionValues>
+                                  <defaultValue>I</defaultValue>
+                                </field>
+                                <field description="Описание" name="description" nullable="true" type="S">
+                                  <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5e0J7Qv9C40YHQsNC90LjQtSDQvNC+0LbQtdGCINGB0L7QtNC10YDQttCw0YLRjCDRgtC+0LvRjNC60L4g0L/QtdGH0LDRgtC90YvQtSDRgdC40LzQstC+0LvRix0=</validators>
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                                <field description="По умолчанию" name="defaultValue" nullable="true" type="S">
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                                <field description="Неизменяемое" name="readonly" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field description="Может быть NULL" name="nullable" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field description="Ключевое" name="key" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field description="Допустимые значения" name="selvals" type="T">
+                                  <defaultValue>
+                                    <table>
+                                      <format maxRecords="2147483647" reorderable="true">
+                                        <fields>
+                                          <field description="Значение" keyfield="true" name="value" nullable="true" type="S">
+                                            <defaultValue>
+                                              <nullValue/>
+                                            </defaultValue>
+                                          </field>
+                                          <field description="Описание" name="description" type="S">
+                                            <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                            <defaultValue/>
+                                          </field>
+                                        </fields>
+                                        <validators contentType="base64">HEseHQ==</validators>
+                                      </format>
+                                    </table>
+                                  </defaultValue>
+                                </field>
+                                <field description="Расширяемые допустимые значения" name="extselvals" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field advanced="true" description="Скрытый" name="hidden" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field advanced="true" description="Встроенное" name="inline" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field advanced="true" description="Зашифрованное" name="encrypted" type="B">
+                                  <defaultValue>0</defaultValue>
+                                </field>
+                                <field description="Справка" editor="textarea" name="help" nullable="true" type="S">
+                                  <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5e0J7Qv9C40YHQsNC90LjQtSDQvNC+0LbQtdGCINGB0L7QtNC10YDQttCw0YLRjCDRgtC+0LvRjNC60L4g0L/QtdGH0LDRgtC90YvQtSDRgdC40LzQstC+0LvRix0=</validators>
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                                <field description="Редактор" extendableSelectionValues="true" name="editor" nullable="true" type="S">
+                                  <selectionValues>
+                                    <option description="По умолчанию">
+                                      <nullValue/>
+                                    </option>
+                                    <option description="Список">list</option>
+                                    <option description="Дата">date</option>
+                                    <option description="Время">time</option>
+                                    <option description="Индикатор">bar</option>
+                                    <option description="Байты">bytes</option>
+                                    <option description="Формат значения">formatString</option>
+                                    <option description="Экземпляр класса">instance</option>
+                                    <option description="Период времени">period</option>
+                                    <option description="Экземпляр внешнего класса">foreignInstance</option>
+                                    <option description="Выражение">expression</option>
+                                    <option description="Выбор функции">functionselector</option>
+                                    <option description="Пароль">password</option>
+                                    <option description="Текстовый редактор">text</option>
+                                    <option description="HTML">html</option>
+                                    <option description="Текстовая область">textarea</option>
+                                    <option description="Встроенная текстовая область">etextarea</option>
+                                    <option description="Контекст">context</option>
+                                    <option description="Маска контекстов">contextmask</option>
+                                    <option description="Шрифт">font</option>
+                                    <option description="IP адрес">ip</option>
+                                    <option description="Бокс">box</option>
+                                    <option description="Изображение">image</option>
+                                    <option description="Звук">sound</option>
+                                    <option description="Hex">hex</option>
+                                    <option description="Ссылка">reference</option>
+                                    <option description="Активатор">activator</option>
+                                    <option description="Редактор кода">code</option>
+                                    <option description="Счетчик">spinner</option>
+                                    <option description="Уровень события">eventLevel</option>
+                                    <option description="Временной диапазон">dateRange</option>
+                                  </selectionValues>
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                                <field description="Опции редактора" name="editorOptions" nullable="true" type="T">
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                                <field description="Валидаторы" name="validators" nullable="true" type="T">
+                                  <defaultValue>
+                                    <table>
+                                      <format maxRecords="2147483647" reorderable="true">
+                                        <fields>
+                                          <field description="Тип" name="validator" nullable="true" type="S">
+                                            <selectionValues>
+                                              <option description="По умолчанию">
+                                                <nullValue/>
+                                              </option>
+                                              <option description="Валидатор идентификаторов">I</option>
+                                              <option description="Валидатор лимитов">L</option>
+                                              <option description="Ненулевой Валидатор">N</option>
+                                              <option description="Валидатор регулярных выражений">R</option>
+                                              <option description="Валидатор выражений">E</option>
+                                            </selectionValues>
+                                            <defaultValue>
+                                              <nullValue/>
+                                            </defaultValue>
+                                          </field>
+                                          <field description="Параметры" name="options" type="S">
+                                            <defaultValue/>
+                                          </field>
+                                        </fields>
+                                      </format>
+                                    </table>
+                                  </defaultValue>
+                                </field>
+                                <field description="Группа" name="group" nullable="true" type="S">
+                                  <defaultValue>
+                                    <nullValue/>
+                                  </defaultValue>
+                                </field>
+                              </fields>
+                              <bindings>
+                                <binding>
+                                  <reference>editorOptions</reference>
+                                  <expression>callFunction(&quot;utilities&quot;, &quot;editorOptions&quot;, {type}, {editor}, {editorOptions})</expression>
+                                </binding>
+                                <binding>
+                                  <reference>editor#choices</reference>
+                                  <expression>{utilities:editors(&apos;{type}&apos;)}</expression>
+                                </binding>
+                              </bindings>
+                              <validators contentType="base64">HEseHQ==</validators>
+                            </format>
+                          </table>
+                        </defaultValue>
+                      </field>
+                      <field description="Сортировка разрешена" name="reorderable" type="B">
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Запрещено изменение количества записей" name="unresizable" type="B">
+                        <defaultValue>0</defaultValue>
+                      </field>
+                      <field description="Привязки" name="bindings" type="T">
+                        <defaultValue>
+                          <table>
+                            <format maxRecords="2147483647" reorderable="true">
+                              <fields>
+                                <field description="Цель" name="target" type="S">
+                                  <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                  <defaultValue/>
+                                </field>
+                                <field description="Выражение" editor="expression" name="expression" type="S">
+                                  <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                  <defaultValue/>
+                                </field>
+                              </fields>
+                            </format>
+                          </table>
+                        </defaultValue>
+                      </field>
+                      <field description="Закодированный" editor="textarea" name="encoded" readonly="true" type="S">
+                        <help>Закодированный формат таблицы</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Выражение именования" editor="expression" name="namingExpression" nullable="true" type="S">
+                        <defaultValue>
+                          <nullValue/>
+                        </defaultValue>
+                      </field>
+                    </fields>
+                    <validators contentType="base64">HEUeZTIxcGJsSmxZMjl5WkhOOUlEdzlJSHR0WVhoU1pXTnZjbVJ6ZlNBL0lHNTFiR3dnT2lBbnpPRHE4ZWpzNE92ODdlN2xJT3J1NitqMzVmSHk0dTRnNStEdjZQSGw2U0R0NVNEczd1Ymw4aURoKy9MOElPemw3Zno0NVN3ZzkrWHNJT3pvN2VqczRPdjg3ZTdsSnc9PR0=</validators>
+                  </format>
+                  <records>
+                    <record/>
+                  </records>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Выражение значения гранулы" editor="expression" extendableSelectionValues="true" name="granuleValueExpression" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Выражение временной метки гранулы" editor="expression" extendableSelectionValues="true" name="granuleTimestampExpression" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Период хранения гранулы" editor="period" extendableSelectionValues="true" name="granuleExpirationPeriod" type="L">
+              <defaultValue>31536000000</defaultValue>
+            </field>
+            <field advanced="true" description="Точность временной метки гранулы" editor="period" extendableSelectionValues="true" name="granuleTimestampPrecision" type="L">
+              <defaultValue>10</defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>variable#choices</reference>
+              <expression>{utilities:variablesByMask({.:})}</expression>
+            </binding>
+          </bindings>
+          <validators contentType="base64">HEseHQ==</validators>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>managedFunctions</string>
+      <table>
+        <format maxRecords="2147483647" unresizable="true">
+          <fields>
+            <field description="Имя" name="name" readonly="true" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Описание" name="description" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Группа" name="group" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Активный" name="active" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+          </fields>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>ccmCompliancePolicies</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Политика соответствия" editor="contextmask" name="ccmCompliancePolicy" type="S">
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+      </table>
+    </entry>
+  </properties>
+</properties>
